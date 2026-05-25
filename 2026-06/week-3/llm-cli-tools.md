@@ -1,9 +1,3 @@
----
-sidebar_position: 3
-title: LLM CLI Tools
-description: Use Simon Willison's llm CLI, aichat, and shell pipelines to query LLMs directly from the terminal and automate AI workflows with Unix tools.
----
-
 # LLM CLI Tools
 
 CLI tools for LLMs bring AI into your existing shell workflows. Pipe text in, get structured answers out. No Python script needed for quick tasks.
@@ -179,8 +173,7 @@ cargo install aichat
 
 ### Configuration
 
-```yaml title="~/.config/aichat/config.yaml"
-model: claude:claude-sonnet-4-6
+```yamlmodel: claude:claude-sonnet-4-6
 # or: openai:gpt-4o-mini
 # or: ollama:llama3.2
 

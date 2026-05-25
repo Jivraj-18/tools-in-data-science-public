@@ -1,9 +1,3 @@
----
-sidebar_position: 1
-title: Week 03 Labs
-description: Hands-on labs for Week 3 — LLM Engineering
----
-
 # Week 03 — Hands-on Labs
 
 Two labs this week. Together they cover the **full LLM engineering cycle**: extract real-world data → process with LLMs → structure the output → measure cost → benchmark strategies.
@@ -54,8 +48,7 @@ Before starting, make sure you have:
 
 Create one `.env` file for both labs:
 
-```bash title=".env"
-ANTHROPIC_API_KEY=sk-ant-...
+```bashANTHROPIC_API_KEY=sk-ant-...
 OPENAI_API_KEY=sk-...
 LANGCHAIN_TRACING_V2=true
 LANGCHAIN_API_KEY=ls__...
@@ -64,6 +57,6 @@ LANGCHAIN_PROJECT=tds-week-3-labs
 
 ---
 
-:::tip Project 1 Notice
+
+**Tip: Project 1 Notice**
 These labs contribute to **Project 1** (due end of Week 3). Build them carefully — the pipeline patterns from Lab 3.1 and the benchmarking mindset from Lab 3.2 are directly applicable to the project.
-:::

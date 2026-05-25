@@ -1,9 +1,3 @@
----
-sidebar_position: 7
-title: Deployment Platforms
-description: Deploy FastAPI apps to HuggingFace Spaces, Render, Railway, and Vercel — trade-offs, when to use which, and step-by-step guides.
----
-
 id: deployment-platforms
 # Deployment Platforms
 
@@ -46,8 +40,7 @@ my-api/
 
 HuggingFace Spaces uses port **7860** and runs as user with UID 1000:
 
-```dockerfile title="Dockerfile"
-FROM python:3.12-slim
+```dockerfileFROM python:3.12-slim
 
 RUN useradd -m -u 1000 user
 WORKDIR /app
@@ -68,8 +61,7 @@ CMD ["uv", "run", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "7860"]
 
 **4. README.md (required metadata)**
 
-```yaml title="README.md"
----
+```yaml---
 title: My TDS API
 emoji: 🚀
 colorFrom: blue
@@ -105,8 +97,7 @@ Best for: **persistent APIs**, **background workers**, **PostgreSQL databases**.
 
 **1. Create a `render.yaml`** (Infrastructure as Code):
 
-```yaml title="render.yaml"
-services:
+```yamlservices:
   - type: web
     name: tds-api
     runtime: python

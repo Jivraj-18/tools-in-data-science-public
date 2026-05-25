@@ -1,8 +1,3 @@
----
-title: Lab — Red-team your own API + add NeMo Guardrails
-description: Offense → defense loop (dummy).
----
-
 # Lab — Red-team your own API + add NeMo Guardrails
 
 _This is placeholder content for **Week 07 — CI/CD, Security & Cloud Infrastructure**._

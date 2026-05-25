@@ -1,9 +1,3 @@
----
-sidebar_position: 12
-title: Semantic Caching
-description: Avoid redundant LLM calls — cache answers by semantic similarity so similar questions reuse previous results. Dramatically reduces cost and latency.
----
-
 # Semantic Caching
 
 > If two questions mean the same thing, why call the LLM twice?

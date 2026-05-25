@@ -1,17 +1,8 @@
----
-id: vscode
-title: VS Code — Your Command Center
-sidebar_label: 01 · VS Code
-sidebar_position: 2
-description: Install, configure, and master Visual Studio Code for Python, data science, and AI development in 2026.
-keywords: [vscode, visual studio code, python, jupyter, remote development, copilot, extensions]
----
-
 # 01 · VS Code
 
-:::info TL;DR
+
+**Info: TL;DR**
 Visual Studio Code is a free, extensible code editor from Microsoft. It has ~75% developer market share in 2026 and runs locally, over SSH, inside Docker, and in the browser. It is your home base for the entire course.
-:::
 
 ## Why VS Code?
 
@@ -23,7 +14,7 @@ There are fancier editors (JetBrains PyCharm, Neovim), but VS Code wins because:
 4. **Native AI assistance** — GitHub Copilot, Claude, Gemini all have first-class VS Code integrations.
 5. **You'll see it in every job** — it's the editor of the industry.
 
-<YouTube id="KMxo3T_MTvY" title="VS Code Tutorial for Beginners" />
+[![VS Code Tutorial for Beginners](https://i.ytimg.com/vi/KMxo3T_MTvY/hqdefault.jpg)](https://youtu.be/KMxo3T_MTvY)
 
 ## Install VS Code
 
@@ -93,7 +84,8 @@ Install these by pressing <kbd>Cmd/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>X</kbd> to o
 | **GitHub Copilot** | GitHub | AI autocomplete + agent mode (free tier available) |
 | **Mermaid Markdown Preview** | bierner | Render Mermaid diagrams in markdown |
 
-:::tip Install them all at once
+
+**Tip: Install them all at once**
 Open the terminal and run:
 ```bash
 code --install-extension ms-python.python \
@@ -107,7 +99,6 @@ code --install-extension ms-python.python \
      --install-extension github.copilot \
      --install-extension bierner.markdown-mermaid
 ```
-:::
 
 ## Settings Sync
 
@@ -117,8 +108,7 @@ Press <kbd>Cmd/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> → `Settings Sync: Turn
 
 Open `settings.json` (Command Palette → **Preferences: Open User Settings (JSON)**) and paste:
 
-```json title="settings.json"
-{
+```json{
   // Editor
   "editor.formatOnSave": true,
   "editor.rulers": [88, 120],
@@ -175,9 +165,9 @@ The first connect installs a small `vscode-server` on the remote. Subsequent con
 
 You get variable inspection, plot inline, Copilot completions per cell, and you can convert notebook ↔ `.py` with one command.
 
-:::note No more lost kernels
+
+**Note: No more lost kernels**
 Before VS Code, notebooks meant either Classic Jupyter (separate browser) or JupyterLab. Today most data scientists run notebooks directly in VS Code because they can jump between `.py` files and `.ipynb` in the same window. Classic Jupyter is still great for quick one-off experiments on a remote server via browser.
-:::
 
 ## AI Assistance — Copilot and Beyond
 
@@ -190,14 +180,14 @@ In April 2026, VS Code's AI features include:
 
 Free tier: monthly inline suggestion and chat quota. Pro: $10/month unlimited.
 
-:::tip Custom instructions
+
+**Tip: Custom instructions**
 Create `.github/copilot-instructions.md` in your repo to give the AI project-wide conventions. Example:
 ```markdown
 - This is a Python 3.13 project using FastAPI and SQLModel.
 - All new code must include type hints and a pytest test.
 - Use Ruff rules; never use `black` or `isort`.
 ```
-:::
 
 ## Keyboard Shortcuts You Must Memorize
 

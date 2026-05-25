@@ -1,8 +1,3 @@
----
-title: GitHub Actions Advanced
-description: Matrix builds, reusable workflows, OIDC, secrets
----
-
 # GitHub Actions Advanced
 
 _This is placeholder content for **Week 07 — CI/CD, Security & Cloud Infrastructure** (May 2026). Replace sections below with lecture notes, examples, and exercises._

@@ -1,8 +1,3 @@
----
-title: Tools Glossary
-description: Short definitions (placeholder)
----
-
 # Tools Glossary
 
 _This page is a placeholder._

@@ -1,9 +1,3 @@
----
-sidebar_position: 1
-title: Week 4 Labs & Capstones
-description: Hands-on RAG labs — build a production hybrid RAG chatbot, a policy bot with guardrails, and an evaluation dashboard.
----
-
 # Week 4 — Labs & Capstones
 
 This week has **two capstone projects** and **one lab assignment**.

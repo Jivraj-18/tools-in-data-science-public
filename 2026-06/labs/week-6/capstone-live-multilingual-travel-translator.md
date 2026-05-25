@@ -1,8 +1,3 @@
----
-title: Capstone — Live Multilingual Travel Translator
-description: Whisper, LLM, ElevenLabs, FastAPI
----
-
 # Capstone — Live Multilingual Travel Translator
 
 ## Objective

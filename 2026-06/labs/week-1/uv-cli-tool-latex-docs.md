@@ -1,17 +1,8 @@
----
-id: uv-cli-tool-latex-docs
-title: "Lab 1.2 — UV CLI Tool + LaTeX Docs on GitHub Pages"
-sidebar_label: "1.2 · UV CLI + LaTeX Docs"
-sidebar_position: 3
-description: Build and publish a CLI tool with UV, auto-generate a LaTeX-rendered PDF via pandoc, and deploy documentation to GitHub Pages.
-keywords: [lab, uv, cli, latex, pandoc, pdf, github pages, docusaurus]
----
-
 # Lab 1.2 — UV CLI Tool + LaTeX Docs PDF on GitHub Pages
 
-:::info What you'll build
+
+**Info: What you'll build**
 A command-line tool published via **UV** that anyone can run with `uvx your-tool`, plus a professional PDF documentation file generated with **LaTeX + pandoc**, deployed to **GitHub Pages** along with a Docusaurus-style HTML site.
-:::
 
 **Time:** 60–90 minutes.
 **Difficulty:** ⭐⭐⭐☆☆.
@@ -97,8 +88,7 @@ uv add --dev pytest
 
 Rename `main.py` to `cli.py` and replace its contents:
 
-```python title="cli.py"
-"""tds-csv — quickly explore a CSV file."""
+```python"""tds-csv — quickly explore a CSV file."""
 
 from pathlib import Path
 from importlib.metadata import version as _v
@@ -159,8 +149,7 @@ if __name__ == "__main__":
 
 Edit `pyproject.toml` to expose `tds-csv` as an entry point:
 
-```toml title="pyproject.toml (add this section)"
-[project.scripts]
+```toml[project.scripts]
 tds-csv = "cli:app"
 
 [build-system]
@@ -170,8 +159,7 @@ build-backend = "hatchling.build"
 
 Full file should look like:
 
-```toml title="pyproject.toml"
-[project]
+```toml[project]
 name = "tds-csv-YOURNAME"
 version = "0.1.0"
 description = "Quickly explore a CSV file from the command line."
@@ -263,8 +251,7 @@ Create a `docs/` folder and put your documentation in Markdown:
 mkdir docs
 ```
 
-```markdown title="docs/index.md"
----
+```markdown---
 title: tds-csv — User Guide
 author: Your Name
 date: 2026-05-10
@@ -331,8 +318,7 @@ MIT — see the [LICENSE](https://github.com/YOUR-USERNAME/tds-csv-YOURNAME/blob
 
 Create a pandoc template for nicer PDF output:
 
-```latex title="docs/template.tex"
-\documentclass[11pt,a4paper]{article}
+```latex\documentclass[11pt,a4paper]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{hyperref}
 \usepackage{graphicx}
@@ -380,9 +366,9 @@ pandoc docs/index.md -o docs/tds-csv.pdf \
 
 Open `docs/tds-csv.pdf` — you should have a beautifully typeset document with a cover page, TOC, and code highlighting.
 
-:::tip If pandoc isn't installed locally
+
+**Tip: If pandoc isn't installed locally**
 Skip this local build and let GitHub Actions do it (Step 11). The Action's Ubuntu runner has `pandoc` + `texlive` pre-installable.
-:::
 
 </details>
 
@@ -410,8 +396,7 @@ cp docs/index.md site/docs/intro.md
 
 Edit `site/docusaurus.config.ts` — set `url`, `baseUrl`, `organizationName`, `projectName`:
 
-```ts title="site/docusaurus.config.ts"
-const SITE_URL = process.env.SITE_URL ?? 'https://YOUR-USERNAME.github.io';
+```tsconst SITE_URL = process.env.SITE_URL ?? 'https://YOUR-USERNAME.github.io';
 const BASE_URL = process.env.BASE_URL ?? '/tds-csv-YOURNAME/';
 
 const config = {
@@ -464,8 +449,7 @@ Reference it in `site/docs/intro.md`:
 
 This workflow **rebuilds the PDF** on every push and **deploys the site** to GitHub Pages.
 
-```yaml title=".github/workflows/deploy.yml"
-name: Deploy Docs
+```yamlname: Deploy Docs
 
 on:
   push:

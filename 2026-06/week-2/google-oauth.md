@@ -1,9 +1,3 @@
----
-sidebar_position: 3
-title: Google OAuth 2.0
-description: Add real authentication to FastAPI using Google OAuth 2.0, JWT tokens, and protected endpoints.
----
-
 id: google-oauth
 import { YouTube } from '@site/src/components/YouTube';
 
@@ -11,7 +5,8 @@ import { YouTube } from '@site/src/components/YouTube';
 
 OAuth 2.0 lets users log in with their **existing Google account** — no passwords to store, no password resets to build, no security breaches from leaked hashes. Google handles the hard part; you just receive a verified identity.
 
-:::info The Flow in Plain English
+
+**Info: The Flow in Plain English**
 1. User clicks "Login with Google"
 2. You redirect them to Google's login page
 3. Google asks "Allow this app to see your email?"
@@ -20,7 +15,6 @@ OAuth 2.0 lets users log in with their **existing Google account** — no passwo
 6. You call Google's API with the access token to get the user's email/name
 7. You create a **JWT** (your own session token) and send it to the user
 8. User sends the JWT on future requests → you verify it and know who they are
-:::
 
 ---
 
@@ -50,8 +44,7 @@ uv add "authlib>=1.3" "httpx>=0.27" "python-jose[cryptography]>=3.3" "itsdangero
 
 ## Environment Variables
 
-```bash title=".env"
-GOOGLE_CLIENT_ID=your-client-id.apps.googleusercontent.com
+```bashGOOGLE_CLIENT_ID=your-client-id.apps.googleusercontent.com
 GOOGLE_CLIENT_SECRET=your-client-secret
 SECRET_KEY=your-random-secret-key-min-32-chars-long
 REDIRECT_URI=http://localhost:8000/auth/callback
@@ -66,8 +59,7 @@ python -c "import secrets; print(secrets.token_hex(32))"
 
 ## Full OAuth Implementation
 
-```python title="main.py"
-from fastapi import FastAPI, HTTPException, Depends, Request
+```pythonfrom fastapi import FastAPI, HTTPException, Depends, Request
 from fastapi.responses import RedirectResponse, JSONResponse
 from authlib.integrations.httpx_client import AsyncOAuth2Client
 from jose import JWTError, jwt
@@ -233,7 +225,7 @@ def get_current_user(request: Request) -> dict:
 
 ## Video Reference
 
-<YouTube id="5GxQ1rLTwaU" title="OAuth 2.0 Explained" />
+[![OAuth 2.0 Explained](https://i.ytimg.com/vi/5GxQ1rLTwaU/hqdefault.jpg)](https://youtu.be/5GxQ1rLTwaU)
 
 ---
 

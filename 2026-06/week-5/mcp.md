@@ -1,8 +1,3 @@
----
-title: MCP (Model Context Protocol)
-description: Specs, clients, servers
----
-
 # Model Context Protocol (MCP)
 
 MCP standardizes how AI models interact with external data sources and tools.

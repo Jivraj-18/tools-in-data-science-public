@@ -1,9 +1,3 @@
----
-sidebar_position: 1
-title: Chunking Strategies
-description: How you split documents is the single most impactful decision in a RAG pipeline. Master fixed-size, semantic, and hierarchical chunking.
----
-
 import Details from '@theme/Details';
 
 # Chunking Strategies

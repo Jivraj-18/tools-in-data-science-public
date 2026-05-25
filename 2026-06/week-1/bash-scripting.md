@@ -1,30 +1,20 @@
----
-id: bash-scripting
-title: Bash Scripting — The Glue of Everything
-sidebar_label: 03 · Bash Scripting
-sidebar_position: 4
-description: Pipes, redirects, cron, jq, sed, awk, and environment variables. The shell is the universal interface to Unix-like systems.
-keywords: [bash, shell, scripting, pipes, cron, jq, sed, awk, env vars, linux]
----
-
 # 03 · Bash Scripting
 
-:::info TL;DR
+
+**Info: TL;DR**
 Bash is the most common shell on Linux and macOS. Learning to pipe commands, manipulate text, and schedule jobs will 10× your productivity on every server you ever touch.
-:::
 
 ## Why Bash?
 
 Every Linux server, every Docker container, every CI runner has a shell. Your Python scripts can do anything — but to **glue** them together (download a file, run a script, upload results, email you when done), Bash is usually the easiest tool. Bash is everywhere, it's already installed, and it doesn't require a virtual environment.
 
-<YouTube id="I4EWvMFj37g" title="Bash Scripting Full Course in 3 Hours" />
+[![Bash Scripting Full Course in 3 Hours](https://i.ytimg.com/vi/I4EWvMFj37g/hqdefault.jpg)](https://youtu.be/I4EWvMFj37g)
 
 ## The Shebang and the Basics
 
 Every script starts with a **shebang**:
 
-```bash title="hello.sh"
-#!/usr/bin/env bash
+```bash#!/usr/bin/env bash
 set -euo pipefail             # strict mode — fail early
 
 name="${1:-world}"            # first arg, or 'world' if not given
@@ -39,13 +29,13 @@ chmod +x hello.sh
 ./hello.sh TDS                # Hello, TDS!
 ```
 
-:::tip The strict mode line
+
+**Tip: The strict mode line**
 `set -euo pipefail` is non-negotiable:
 - `-e` — exit immediately on any error
 - `-u` — error on undefined variable
 - `-o pipefail` — fail if any command in a pipe fails
 Without these, silent failures will bite you.
-:::
 
 ## Pipes and Redirects — The Unix Philosophy
 
@@ -93,8 +83,7 @@ echo "Total: ${count}"
 
 ## Control Flow
 
-```bash title="example.sh"
-#!/usr/bin/env bash
+```bash#!/usr/bin/env bash
 set -euo pipefail
 
 # if / else
@@ -191,9 +180,9 @@ jq '{id, title: .name, when: .created_at}' repos.json
 jq -r '.[] | [.id, .name] | @csv' users.json
 ```
 
-:::tip jq is the most underrated CLI tool
+
+**Tip: jq is the most underrated CLI tool**
 Every API in the world returns JSON. `jq` lets you slice it from the shell without writing Python. Bookmark [jqplay.org](https://jqplay.org/) as a playground.
-:::
 
 ## Environment Variables
 
@@ -213,15 +202,14 @@ env | grep API
 
 `.env` file format (used by UV, Docker, `python-dotenv`, and most tools):
 
-```bash title=".env"
-API_KEY=sk-...
+```bashAPI_KEY=sk-...
 DATABASE_URL=postgres://...
 DEBUG=true
 ```
 
-:::warning Never commit secrets
+
+**Warning: Never commit secrets**
 Add `.env` to `.gitignore`. Commit `.env.example` (with fake values) so teammates know what's expected.
-:::
 
 ## `cron` — Schedule Recurring Jobs
 
@@ -250,17 +238,16 @@ crontab -l          # list current jobs
 crontab -r          # remove all (careful!)
 ```
 
-:::tip Debugging cron
+
+**Tip: Debugging cron**
 Cron runs in a stripped environment. Always use full paths (`/usr/bin/python3`, not `python3`), redirect both streams to a log file, and `cd` to your project directory first:
 ```bash
 0 9 * * * cd /home/me/project && /usr/bin/env bash ./run.sh >> /var/log/myjob.log 2>&1
 ```
-:::
 
 ## Functions, Arguments, and Exit Codes
 
-```bash title="deploy.sh"
-#!/usr/bin/env bash
+```bash#!/usr/bin/env bash
 set -euo pipefail
 
 usage() {
@@ -312,8 +299,7 @@ Write a script `top-files.sh` that:
 <details>
 <summary>Solution</summary>
 
-```bash title="top-files.sh"
-#!/usr/bin/env bash
+```bash#!/usr/bin/env bash
 set -euo pipefail
 
 dir="${1:-.}"

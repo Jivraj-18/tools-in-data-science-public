@@ -1,8 +1,3 @@
----
-title: Function / Tool Calling
-description: Schema design, chaining, parallel calls
----
-
 # Function / Tool Calling
 
 Tool calling is the bridge between LLMs and external systems (APIs, databases, the OS).

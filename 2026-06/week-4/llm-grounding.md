@@ -1,9 +1,3 @@
----
-sidebar_position: 8
-title: LLM Grounding & Citations
-description: Make your RAG answers verifiable — source attribution, inline citations, and hallucination detection.
----
-
 # LLM Grounding & Citations
 
 > An answer without a source is just an opinion. Ground your LLM to the documents it retrieved.

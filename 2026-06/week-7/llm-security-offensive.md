@@ -1,8 +1,3 @@
----
-title: LLM Security — Offensive
-description: Prompt injection, jailbreaks, exfiltration probes
----
-
 # LLM Security — Offensive
 
 _This is placeholder content for **Week 07 — CI/CD, Security & Cloud Infrastructure** (May 2026). Replace sections below with lecture notes, examples, and exercises._

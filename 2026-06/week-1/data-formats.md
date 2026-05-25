@@ -1,17 +1,8 @@
----
-id: data-formats
-title: Data Formats — Unicode, JSON, YAML, TOML, Markdown, Base64
-sidebar_label: 08 · Data Formats
-sidebar_position: 9
-description: The vocabulary of modern APIs and configs. Know when to use each.
-keywords: [json, yaml, toml, markdown, base64, unicode, utf-8, messagepack, data formats]
----
-
 # 08 · Data Formats
 
-:::info TL;DR
+
+**Info: TL;DR**
 Different problems need different formats. **JSON** for APIs. **TOML** for Python configs. **YAML** for CI/infra. **Markdown** for prose. **Base64** for binary-in-text. **Unicode/UTF-8** underlies all of them.
-:::
 
 ## Unicode and UTF-8 — The Foundation
 
@@ -43,7 +34,7 @@ open("file.txt", encoding="utf-8")   # be explicit on Windows
 Content-Type: application/json; charset=utf-8
 ```
 
-<YouTube id="MijmeoH9LT4" title="Unicode, UTF-8, and the Web — Computerphile" />
+[![Unicode, UTF-8, and the Web — Computerphile](https://i.ytimg.com/vi/MijmeoH9LT4/hqdefault.jpg)](https://youtu.be/MijmeoH9LT4)
 
 ## JSON — The Universal API Format
 
@@ -107,9 +98,9 @@ jq empty < data.json      # exits non-zero on bad JSON
 jq '.name = "Bob"' data.json > new.json
 ```
 
-:::tip JSON vs JSON5 vs JSONC
+
+**Tip: JSON vs JSON5 vs JSONC**
 Strict JSON has no comments. **JSONC** (JSON with Comments) and **JSON5** are loose variants used in config files (VS Code `settings.json` is JSONC). For machine-readable data interchange, stick to strict JSON.
-:::
 
 ## YAML — Human-Readable Config
 
@@ -163,9 +154,9 @@ staging:
   url: https://staging
 ```
 
-:::warning The Norway bug
+
+**Warning: The Norway bug**
 YAML 1.1 treats `no`, `yes`, `on`, `off` as booleans. A country list `[no, is, se, de, fi]` silently becomes `[False, "is", "se", "de", "fi"]`. Use YAML 1.2 libraries (`ruamel.yaml`) and quote strings that look like booleans.
-:::
 
 ### Python YAML
 
@@ -181,8 +172,7 @@ yaml.safe_dump(data, open("out.yml", "w"), sort_keys=False)
 
 TOML (Tom's Obvious, Minimal Language) is the official format for `pyproject.toml`. Stricter than YAML, kinder to humans than JSON.
 
-```toml title="pyproject.toml"
-[project]
+```toml[project]
 name = "my-package"
 version = "0.1.0"
 description = "A sample package."
@@ -314,9 +304,9 @@ Common real-world uses:
 - **JWT tokens**: three base64url-encoded parts separated by `.`
 - **API payloads with binary**: images/PDFs inside JSON
 
-:::warning Not encryption
+
+**Warning: Not encryption**
 Base64 is **encoding**, not encryption. Anyone can decode it. Don't put secrets there.
-:::
 
 ### Command line
 

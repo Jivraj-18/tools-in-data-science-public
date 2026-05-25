@@ -1,17 +1,8 @@
----
-id: bash-daily-project-summary
-title: "Lab 1.3 — Bash Automation: Daily Project Summary"
-sidebar_label: "1.3 · Bash Daily Digest"
-sidebar_position: 4
-description: A cron-scheduled Bash script that generates a daily digest of your project's Git activity and auto-commits it back to the repo.
-keywords: [lab, bash, cron, git, automation, scripting]
----
-
 # Lab 1.3 — Bash Automation: Daily Project Summary
 
-:::info What you'll build
+
+**Info: What you'll build**
 A `bash` script that runs every day (via `cron` locally, or on a schedule via GitHub Actions), computes a summary of the last 24 hours of Git activity across one or more repositories, renders it as a nicely formatted Markdown file, and auto-commits it to a "dashboard" repo.
-:::
 
 **Time:** 45–60 minutes.
 **Difficulty:** ⭐⭐☆☆☆.
@@ -74,8 +65,7 @@ gh repo create tds-daily-YOURNAME --public --source=. --remote=origin --push
 
 Create a `.gitignore`:
 
-```gitignore title=".gitignore"
-*.log
+```gitignore*.log
 *.tmp
 .DS_Store
 ```
@@ -87,8 +77,7 @@ Create a `.gitignore`:
 
 Create `bin/daily-summary.sh` — make it executable:
 
-```bash title="bin/daily-summary.sh"
-#!/usr/bin/env bash
+```bash#!/usr/bin/env bash
 #
 # daily-summary.sh — Generate a Markdown summary of recent Git activity.
 #
@@ -214,8 +203,7 @@ If the file has the four sections (Commits, Lines changed, Active branches, Top 
 
 The summary is useless if it only lives on your laptop. Wrap the script so it commits and pushes:
 
-```bash title="bin/run-and-push.sh"
-#!/usr/bin/env bash
+```bash#!/usr/bin/env bash
 set -euo pipefail
 
 # Go to the dashboard repo root (the one this script lives in).
@@ -281,9 +269,9 @@ Explanation:
 - `/bin/bash -lc` — use bash as a login shell (loads your `PATH`, so `git` is found).
 - `>> /tmp/daily-summary.log 2>&1` — append both stdout and stderr to a log.
 
-:::warning Cron doesn't run on a sleeping laptop
+
+**Warning: Cron doesn't run on a sleeping laptop**
 If your laptop is asleep at 9:00, the job misses. For always-on execution, either use a small VM (Week 7 covers GCP VMs), or use GitHub Actions (Step 6).
-:::
 
 Verify the cron entry:
 
@@ -310,8 +298,7 @@ For a cron that works even if your laptop is off, use GitHub Actions. The Action
 
 Create `.github/workflows/daily-summary.yml`:
 
-```yaml title=".github/workflows/daily-summary.yml"
-name: Daily Summary
+```yamlname: Daily Summary
 
 on:
   schedule:
@@ -362,9 +349,9 @@ Trigger it manually **once** to confirm it works: **Actions → Daily Summary �
 
 After ~30 seconds a new commit should appear on your repo. On the next scheduled run (next morning), it happens automatically.
 
-:::tip GitHub cron is in UTC
+
+**Tip: GitHub cron is in UTC**
 Use `0 3 * * *` for ~08:30 IST, or `30 3 * * *` for 09:00 IST. Test `crontab.guru` for readable cron expressions.
-:::
 
 </details>
 
@@ -373,8 +360,7 @@ Use `0 3 * * *` for ~08:30 IST, or `30 3 * * *` for 09:00 IST. Test `crontab.gur
 
 Extend the script to aggregate multiple projects. Create `bin/multi-summary.sh`:
 
-```bash title="bin/multi-summary.sh"
-#!/usr/bin/env bash
+```bash#!/usr/bin/env bash
 set -euo pipefail
 
 # List of repos to summarize, one per line.

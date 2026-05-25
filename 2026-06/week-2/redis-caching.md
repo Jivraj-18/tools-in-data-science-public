@@ -1,9 +1,3 @@
----
-sidebar_position: 12
-title: Redis Caching
-description: Cache API responses, manage sessions, implement rate limiting counters, and use pub/sub with Redis in FastAPI.
----
-
 id: redis-caching
 import { YouTube } from '@site/src/components/YouTube';
 
@@ -11,12 +5,12 @@ import { YouTube } from '@site/src/components/YouTube';
 
 Redis is an in-memory data store — think of it as a Python dictionary that lives outside your app, survives restarts (optional), and can be shared across multiple server instances. It's **blazing fast** (sub-millisecond reads) because everything is in RAM.
 
-:::info Four main uses in a FastAPI app
+
+**Info: Four main uses in a FastAPI app**
 1. **Response caching** — cache expensive API results (LLM calls, DB queries)
 2. **Session management** — store user sessions server-side
 3. **Rate limiting counters** — count requests per IP per minute
 4. **Pub/Sub** — broadcast events between services
-:::
 
 ---
 
@@ -99,8 +93,7 @@ r.zrange("leaderboard", 0, -1, withscores=True, rev=True)
 
 Cache expensive operations (LLM calls, complex DB queries) so repeated requests return instantly:
 
-```python title="cache.py"
-import redis.asyncio as aioredis
+```pythonimport redis.asyncio as aioredis
 import json
 import hashlib
 from functools import wraps
@@ -146,8 +139,7 @@ def cache_response(ttl: int = 300, prefix: str = "cache"):
     return decorator
 ```
 
-```python title="main.py"
-from fastapi import FastAPI, Depends
+```pythonfrom fastapi import FastAPI, Depends
 import asyncio
 
 app = FastAPI()
@@ -210,9 +202,9 @@ async def update_product(product_id: int, data: ProductUpdate, r = Depends(get_r
     return product
 ```
 
-:::warning Always invalidate the cache on updates!
+
+**Warning: Always invalidate the cache on updates!**
 If you update a product in the DB but don't delete the Redis key, users will see stale data for 5 minutes. The pattern: **update DB → delete cache key**.
-:::
 
 ---
 
@@ -220,8 +212,7 @@ If you update a product in the DB but don't delete the Redis key, users will see
 
 Store user sessions in Redis instead of in-memory (so they survive restarts):
 
-```python title="sessions.py"
-import redis.asyncio as aioredis
+```pythonimport redis.asyncio as aioredis
 import json
 import secrets
 from datetime import timedelta
@@ -249,8 +240,7 @@ async def refresh_session(r: aioredis.Redis, session_id: str):
     await r.expire(f"session:{session_id}", SESSION_TTL)
 ```
 
-```python title="main.py"
-from fastapi import FastAPI, Cookie, Response, HTTPException, Depends
+```pythonfrom fastapi import FastAPI, Cookie, Response, HTTPException, Depends
 from sessions import create_session, get_session, delete_session
 
 @app.post("/login")
@@ -353,8 +343,7 @@ async def rate_limit_middleware(request: Request, call_next):
 
 Redis Pub/Sub lets services broadcast events to each other without polling:
 
-```python title="publisher.py"
-import redis.asyncio as aioredis
+```pythonimport redis.asyncio as aioredis
 import json
 
 async def publish_event(channel: str, event: dict):
@@ -371,8 +360,7 @@ await publish_event("orders", {
 })
 ```
 
-```python title="subscriber.py"
-import redis.asyncio as aioredis
+```pythonimport redis.asyncio as aioredis
 import json
 import asyncio
 
@@ -399,8 +387,7 @@ asyncio.run(listen_for_events())
 
 ## Redis in Docker Compose
 
-```yaml title="docker-compose.yml"
-services:
+```yamlservices:
   api:
     build: .
     environment:
@@ -435,7 +422,7 @@ r = aioredis.from_url(REDIS_URL, decode_responses=True)
 
 ## Video Reference
 
-<YouTube id="jgpVdJB2sKQ" title="Redis Tutorial for Beginners" />
+[![Redis Tutorial for Beginners](https://i.ytimg.com/vi/jgpVdJB2sKQ/hqdefault.jpg)](https://youtu.be/jgpVdJB2sKQ)
 
 ---
 

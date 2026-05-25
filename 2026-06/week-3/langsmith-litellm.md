@@ -1,9 +1,3 @@
----
-sidebar_position: 10
-title: LangSmith & LiteLLM
-description: Trace LLM calls with LangSmith, route and cost-track across 100+ models with LiteLLM, and build a spend monitoring dashboard.
----
-
 import { YouTube } from '@site/src/components/YouTube';
 
 # LangSmith & LiteLLM
@@ -25,8 +19,7 @@ LangSmith is an observability platform for LLM applications. Every call is logge
 uv add langsmith openai anthropic
 ```
 
-```bash title=".env"
-LANGCHAIN_TRACING_V2=true
+```bashLANGCHAIN_TRACING_V2=true
 LANGCHAIN_API_KEY=ls__your-langsmith-api-key
 LANGCHAIN_PROJECT=tds-week-3
 ```
@@ -425,7 +418,7 @@ for model in models_to_benchmark:
 
 ## Video Reference
 
-<YouTube id="A_HLg6s3LOQ" title="LangSmith Tutorial" />
+[![LangSmith Tutorial](https://i.ytimg.com/vi/A_HLg6s3LOQ/hqdefault.jpg)](https://youtu.be/A_HLg6s3LOQ)
 
 ---
 

@@ -1,9 +1,3 @@
----
-sidebar_position: 4
-title: Query Augmentation
-description: HyDE, query rewriting, and step-back prompting — transform user queries into better retrieval signals before they hit your vector database.
----
-
 # Query Augmentation
 
 > The query the user types is rarely the best query for retrieval. Fix it before it hits your vector database.

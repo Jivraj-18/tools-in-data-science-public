@@ -1,9 +1,3 @@
----
-sidebar_position: 9
-title: Late Chunking
-description: Jina AI's late chunking technique — embed the full document first, then chunk at the token level to preserve long-range context in every chunk's embedding.
----
-
 # Late Chunking
 
 > Traditional chunking: chunk → embed. Late chunking: embed → chunk. That order reversal is everything.

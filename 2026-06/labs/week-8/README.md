@@ -1,8 +1,3 @@
----
-title: Hands-on — Week 08
-description: Labs and capstones for Week 08 — MLOps, Fine-Tuning & Model Publishing
----
-
 # Hands-on — Week 08 — MLOps, Fine-Tuning & Model Publishing
 
 Train, fine-tune, package, publish, and monitor models: data/versioning, MLflow, Vertex AI, HuggingFace, quantization, and responsible model release.

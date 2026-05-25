@@ -1,8 +1,3 @@
----
-title: Lab — Scheduled Scraper with GitHub Actions
-description: Cron, DuckDB, Parquet
----
-
 # Lab — Scheduled Scraper with GitHub Actions
 
 ## Objective

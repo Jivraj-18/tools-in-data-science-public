@@ -1,8 +1,3 @@
----
-title: Week 08 — MLOps, Fine-Tuning & Model Publishing
-description: "Train, fine-tune, package, publish, and monitor models: data/versioning, MLflow, Vertex AI, HuggingFace, quantization, and responsible model release."
----
-
 # Week 08 — MLOps, Fine-Tuning & Model Publishing
 
 Train, fine-tune, package, publish, and monitor models: data/versioning, MLflow, Vertex AI, HuggingFace, quantization, and responsible model release.
@@ -32,6 +27,6 @@ Train, fine-tune, package, publish, and monitor models: data/versioning, MLflow,
 - Implement a small working prototype.
 - Measure or validate results with at least one simple check.
 
-:::tip Content status
+
+**Tip: Content status**
 All pages are placeholders right now. We’ll replace them with real notes later.
-:::

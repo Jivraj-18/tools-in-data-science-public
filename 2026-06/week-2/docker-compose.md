@@ -1,9 +1,3 @@
----
-sidebar_position: 6
-title: Docker & Compose
-description: Containerize FastAPI applications with Docker, build efficient images with multi-stage builds, and orchestrate services with Docker Compose.
----
-
 id: docker-compose
 import { YouTube } from '@site/src/components/YouTube';
 
@@ -11,12 +5,12 @@ import { YouTube } from '@site/src/components/YouTube';
 
 Docker packages your app and all its dependencies into a **container** — a lightweight, isolated environment that runs identically on any machine. No more "works on my machine" problems.
 
-:::info Key Mental Model
+
+**Info: Key Mental Model**
 - **Image** = blueprint (like a class in Python)
 - **Container** = running instance of an image (like an object)
 - **Dockerfile** = recipe for building an image
 - **Docker Compose** = run multiple containers together
-:::
 
 ---
 
@@ -35,8 +29,7 @@ docker run hello-world           # verify it works
 
 ## Your First Dockerfile
 
-```dockerfile title="Dockerfile"
-# Base image — Python 3.12 slim (smaller than full Python image)
+```dockerfile# Base image — Python 3.12 slim (smaller than full Python image)
 FROM python:3.12-slim
 
 # Set working directory inside container
@@ -74,8 +67,7 @@ docker run -p 8000:8000 my-api     # run, map host:8000 → container:8000
 
 Like `.gitignore` but for Docker. Keeps your image small and fast:
 
-```text title=".dockerignore"
-.env
+```text.env
 .env.*
 __pycache__
 *.pyc
@@ -102,8 +94,7 @@ Without `.dockerignore`, Docker copies your entire project including `.venv` (hu
 
 Multi-stage builds create smaller, more secure images by separating the build environment from the runtime environment:
 
-```dockerfile title="Dockerfile"
-# ── Stage 1: Builder ──────────────────────────────────────────
+```dockerfile# ── Stage 1: Builder ──────────────────────────────────────────
 FROM python:3.12-slim AS builder
 
 WORKDIR /app
@@ -177,8 +168,7 @@ docker system prune                        # delete all unused stuff
 
 Compose runs multiple containers as a single application. Your FastAPI app needs both the API server and a Redis cache — Compose handles them together.
 
-```yaml title="docker-compose.yml"
-version: "3.9"
+```yamlversion: "3.9"
 
 services:
   # ── FastAPI App ────────────────────────────────────────────
@@ -266,8 +256,7 @@ docker compose up --build
 
 Run different subsets of services:
 
-```yaml title="docker-compose.yml"
-services:
+```yamlservices:
   api:
     build: .
     ports: ["8000:8000"]
@@ -317,7 +306,7 @@ RUN uv sync --frozen                # always re-runs!
 
 ## Video Reference
 
-<YouTube id="pg19Z8LL06w" title="Docker Tutorial for Beginners" />
+[![Docker Tutorial for Beginners](https://i.ytimg.com/vi/pg19Z8LL06w/hqdefault.jpg)](https://youtu.be/pg19Z8LL06w)
 
 ---
 

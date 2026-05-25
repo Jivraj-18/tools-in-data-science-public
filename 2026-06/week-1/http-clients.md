@@ -1,17 +1,8 @@
----
-id: http-clients
-title: HTTP Clients — curl, httpie, and Postman
-sidebar_label: 06 · HTTP Clients
-sidebar_position: 7
-description: Test any API from the terminal or GUI. curl for scripts, httpie for humans, Postman for collections.
-keywords: [curl, httpie, postman, http, rest, graphql, api client]
----
-
 # 06 · HTTP Clients
 
-:::info TL;DR
+
+**Info: TL;DR**
 Before you write a single line of Python to talk to an API, test it with an HTTP client. **curl** is in every Linux/macOS/Windows (since 2018) install. **httpie** is curl for humans. **Postman** is for saving and sharing collections of requests.
-:::
 
 ## Why Learn Multiple Clients?
 
@@ -195,8 +186,7 @@ Workspaces → Collections → Folders → Requests
 
 The [REST Client extension](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) lets you write `.http` files with your requests. Save, commit, share.
 
-```http title="api-tests.http"
-### Get user (click "Send Request" above the line)
+```http### Get user (click "Send Request" above the line)
 GET https://api.github.com/users/octocat
 Accept: application/json
 

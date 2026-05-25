@@ -1,9 +1,3 @@
----
-sidebar_position: 2
-title: "Lab 3.1 — YouTube → Subtitles → Topics → JSON Pipeline"
-description: Build a complete pipeline that downloads YouTube subtitles with yt-dlp, extracts topics and timestamps using Claude, and produces a structured JSON summary.
----
-
 import { YouTube } from '@site/src/components/YouTube';
 
 # Lab 3.1 — YouTube → Subtitles → Topics → JSON Pipeline
@@ -111,8 +105,7 @@ tds-lab-3-1/
 ```
 
 Create `.env`:
-```bash title=".env"
-ANTHROPIC_API_KEY=sk-ant-your-key-here
+```bashANTHROPIC_API_KEY=sk-ant-your-key-here
 ```
 
 </details>
@@ -120,8 +113,7 @@ ANTHROPIC_API_KEY=sk-ant-your-key-here
 <details>
 <summary>**Step 2 — Define Pydantic Output Models**</summary>
 
-```python title="models.py"
-from pydantic import BaseModel, Field
+```pythonfrom pydantic import BaseModel, Field
 from typing import Optional
 
 class TimeRange(BaseModel):
@@ -193,8 +185,7 @@ class VideoSummary(BaseModel):
 <details>
 <summary>**Step 3 — Subtitle Downloader with yt-dlp**</summary>
 
-```python title="downloader.py"
-"""
+```python"""
 Downloads YouTube video metadata and subtitles using yt-dlp.
 No video downloaded — subtitles only (fast, lightweight).
 """
@@ -321,8 +312,7 @@ and why they matter.
 
 They have duplicates and overlap — we need to clean them:
 
-```python title="vtt_parser.py"
-"""
+```python"""
 Parse WebVTT subtitle files into clean, deduplicated, timestamped segments.
 """
 import re
@@ -517,8 +507,7 @@ if info.vtt_path:
 
 This module contains all Claude calls. Each function does one focused task.
 
-```python title="llm_processor.py"
-"""
+```python"""
 All LLM calls for the YouTube pipeline.
 Uses Claude claude-haiku-4-5-20251001 for cheap steps, claude-sonnet-4-6 for final summary.
 """
@@ -706,8 +695,7 @@ def build_final_summary(
 <details>
 <summary>**Step 6 — Build the Main Pipeline Orchestrator**</summary>
 
-```python title="pipeline.py"
-"""
+```python"""
 Main pipeline: YouTube URL → structured JSON summary.
 
 Usage:
@@ -922,8 +910,7 @@ for i, chunk in enumerate(chunks):
 
 If you process the same video multiple times (iterating on your prompt), caching saves money:
 
-```python title="llm_processor_cached.py"
-"""
+```python"""
 Version of llm_processor.py with prompt caching enabled.
 Caches the transcript — repeated runs on the same video are 90% cheaper.
 """
@@ -969,8 +956,7 @@ def extract_topics_cached(transcript: str, title: str) -> dict:
 <details>
 <summary>**Step 10 — Write Tests**</summary>
 
-```python title="tests/test_vtt_parser.py"
-import pytest
+```pythonimport pytest
 from vtt_parser import parse_vtt, segments_to_transcript, chunk_segments
 from pathlib import Path
 
@@ -1024,8 +1010,7 @@ def test_chunk_segments(sample_vtt_file):
     assert total == len(segments)
 ```
 
-```python title="tests/test_models.py"
-import pytest
+```pythonimport pytest
 from pydantic import ValidationError
 from models import VideoSummary, Chapter, QAPair
 

@@ -1,8 +1,3 @@
----
-title: Lab — Context-Based Extraction Tool
-description: PyMuPDF, Playwright, yt-dlp
----
-
 # Lab — Context-Based Extraction Tool
 
 ## Objective

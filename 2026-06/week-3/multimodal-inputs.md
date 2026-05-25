@@ -1,9 +1,3 @@
----
-sidebar_position: 6
-title: Multimodal Inputs
-description: Send images, PDFs, and audio to LLM APIs using base64 encoding — extract text, analyze charts, process documents programmatically.
----
-
 # Multimodal Inputs
 
 Modern LLMs aren't just text-in, text-out. You can send images, PDFs, and audio directly in API requests and get back rich, structured analysis. This is the foundation of document processing pipelines, visual QA, and OCR-free data extraction.

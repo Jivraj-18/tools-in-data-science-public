@@ -1,8 +1,3 @@
----
-title: Course Structure & Assessment
-description: Grading, projects, ROE exam, and non-graded activities
----
-
 # Course Structure & Assessment
 
 ## Course format
@@ -22,6 +17,6 @@ description: Grading, projects, ROE exam, and non-graded activities
 | Discourse Blog Posts (Non-Graded) | Weekly blogs; selected posts indexed on the portal |
 | Hands On Lab (Non-Graded) | Students complete labs to learn and upgrade skills |
 
-:::note Placeholder
-Rubrics, deadlines, and submission format will be filled in later.
-:::
+
+**Note: Placeholder**
+Rubrics and submission format will be shared separately.

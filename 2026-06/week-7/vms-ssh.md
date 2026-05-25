@@ -1,8 +1,3 @@
----
-title: VMs & SSH
-description: Compute Engine, tmux, rsync, port forwarding
----
-
 # VMs & SSH
 
 _This is placeholder content for **Week 07 — CI/CD, Security & Cloud Infrastructure** (May 2026). Replace sections below with lecture notes, examples, and exercises._

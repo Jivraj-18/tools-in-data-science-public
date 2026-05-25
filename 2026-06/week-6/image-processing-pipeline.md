@@ -1,8 +1,3 @@
----
-title: Image Processing Pipeline
-description: OpenCV, annotation, bounding boxes, crop/mask
----
-
 # Image Processing Pipeline
 
 When scraping images, you often need to pre-process them before analysis or storage.

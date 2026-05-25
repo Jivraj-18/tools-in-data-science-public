@@ -1,9 +1,3 @@
----
-sidebar_position: 2
-title: CORS & Middleware
-description: Handle cross-origin requests, add rate limiting, request validation, and build custom middleware in FastAPI.
----
-
 id: cors-middleware
 # CORS & Middleware
 
@@ -31,8 +25,7 @@ has been blocked by CORS policy
 
 ## Setting Up CORS
 
-```python title="main.py"
-from fastapi import FastAPI
+```pythonfrom fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
@@ -50,9 +43,9 @@ app.add_middleware(
 )
 ```
 
-:::danger Never use `allow_origins=["*"]` in production
+
+**Danger: Never use `allow_origins=["*"]` in production**
 `["*"]` means any website can call your API. Fine for development, dangerous in production — an attacker's site could call your API using your users' cookies.
-:::
 
 ---
 
@@ -126,8 +119,7 @@ app.add_middleware(
 uv add slowapi
 ```
 
-```python title="main.py"
-from fastapi import FastAPI, Request
+```pythonfrom fastapi import FastAPI, Request
 from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
@@ -210,8 +202,7 @@ Wait — decorator middleware runs in **reverse** order (last defined = first to
 
 ## Complete Production Setup
 
-```python title="main.py"
-from fastapi import FastAPI, Request
+```pythonfrom fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.trustedhost import TrustedHostMiddleware
 from slowapi import Limiter, _rate_limit_exceeded_handler

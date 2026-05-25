@@ -1,8 +1,3 @@
----
-title: LLM Architecture
-description: GPT, BERT, BART, T5 encoder/decoder, attention mechanics
----
-
 # LLM Architecture
 
 Understanding what happens inside the model helps you debug unexpected behavior.

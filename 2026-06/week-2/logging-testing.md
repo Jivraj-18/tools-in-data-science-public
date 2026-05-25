@@ -1,9 +1,3 @@
----
-sidebar_position: 8
-title: Logging & Testing
-description: Add structured logging with structlog, write tests with pytest and httpx, and measure coverage.
----
-
 id: logging-testing
 # Logging & Testing
 
@@ -21,8 +15,7 @@ uv add structlog
 
 ### Setup
 
-```python title="logging_config.py"
-import structlog
+```pythonimport structlog
 import logging
 import sys
 
@@ -59,8 +52,7 @@ def setup_logging(debug: bool = False):
 
 ### Using structlog
 
-```python title="main.py"
-import structlog
+```pythonimport structlog
 from logging_config import setup_logging
 
 setup_logging(debug=True)
@@ -104,8 +96,7 @@ uv add --dev pytest pytest-asyncio httpx
 
 ### Basic Test Structure
 
-```python title="tests/test_api.py"
-from fastapi.testclient import TestClient
+```pythonfrom fastapi.testclient import TestClient
 from main import app
 
 # TestClient doesn't need a running server
@@ -139,8 +130,7 @@ pytest -k "test_create"         # run tests matching pattern
 
 ### Testing with Authentication
 
-```python title="tests/conftest.py"
-import pytest
+```pythonimport pytest
 from fastapi.testclient import TestClient
 from main import app
 from config import get_settings, Settings
@@ -173,8 +163,7 @@ def auth_headers(client):
     return {"Authorization": f"Bearer {token}"}
 ```
 
-```python title="tests/test_protected.py"
-def test_protected_without_auth(client):
+```pythondef test_protected_without_auth(client):
     response = client.get("/protected")
     assert response.status_code == 401
 
@@ -186,8 +175,7 @@ def test_protected_with_auth(client, auth_headers):
 
 ### Async Tests
 
-```python title="tests/test_async.py"
-import pytest
+```pythonimport pytest
 import httpx
 from httpx import AsyncClient
 from main import app
@@ -203,8 +191,7 @@ async def test_async_endpoint():
 uv add --dev anyio[trio]
 ```
 
-```ini title="pyproject.toml"
-[tool.pytest.ini_options]
+```ini[tool.pytest.ini_options]
 anyio_mode = "asyncio"
 ```
 
@@ -256,8 +243,7 @@ tests/
 └── test_websocket.py     ← WebSocket tests
 ```
 
-```python title="tests/test_websocket.py"
-from fastapi.testclient import TestClient
+```pythonfrom fastapi.testclient import TestClient
 from main import app
 
 def test_websocket_echo():

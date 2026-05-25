@@ -1,8 +1,3 @@
----
-title: Capstone — Job Posting Scraper & Tracker
-description: Crawl4AI, Firestore, Analytics
----
-
 # Capstone — Job Posting Scraper & Tracker
 
 ## Objective

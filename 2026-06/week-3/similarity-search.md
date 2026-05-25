@@ -1,9 +1,3 @@
----
-sidebar_position: 8
-title: Similarity Search
-description: Learn how ANN indices (HNSW, IVF, PQ) enable fast similarity search at scale — and how to use FAISS, hnswlib, and annoy in practice.
----
-
 # Similarity Search
 
 You have a million embeddings. A user queries arrive. Brute-force cosine similarity over 1M × 1536-dim vectors takes seconds. **Approximate Nearest Neighbor (ANN)** indices make it milliseconds — with only a small loss in recall.

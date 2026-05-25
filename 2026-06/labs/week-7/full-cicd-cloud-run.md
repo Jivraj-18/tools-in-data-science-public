@@ -1,8 +1,3 @@
----
-title: "Lab — Full CI/CD: build → scan → Artifact Registry → deploy to Cloud Run"
-description: End-to-end pipeline on GCP (dummy).
----
-
 # Lab — Full CI/CD: build → scan → Artifact Registry → deploy to Cloud Run
 
 _This is placeholder content for **Week 07 — CI/CD, Security & Cloud Infrastructure**._

@@ -1,8 +1,3 @@
----
-title: Hands-on — Week 01
-description: Labs and capstones for Week 01 — Development Environment & Tooling
----
-
 # Hands-on — Week 01 — Development Environment & Tooling
 
 Set up a modern dev environment and learn the daily tools used by data/AI engineers: editors, packaging, shell, Git, data formats, and lightweight databases.

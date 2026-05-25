@@ -1,8 +1,3 @@
----
-title: Custom MCP Servers
-description: FastMCP, tool exposure, MCP Inspector
----
-
 # Custom MCP Servers
 
 Building MCP servers allows you to expose your custom logic to AI agents.

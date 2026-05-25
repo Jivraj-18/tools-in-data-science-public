@@ -1,17 +1,11 @@
----
-sidebar_position: 2
-title: Context Engineering
-description: Design effective system prompts, write AGENTS.md and CLAUDE.md context files, and manage context windows for consistent LLM behavior.
----
-
 # Context Engineering
 
 Context engineering is the discipline of designing **what goes in the context window** — the system prompt, background documents, instructions, tools, and conversation history — to make an LLM behave consistently and correctly across all inputs.
 
-:::info Prompt Engineering vs Context Engineering
+
+**Info: Prompt Engineering vs Context Engineering**
 - **Prompt Engineering**: How to phrase one query to get a good answer
 - **Context Engineering**: How to architect the entire context so the model behaves reliably *on every query*
-:::
 
 ---
 

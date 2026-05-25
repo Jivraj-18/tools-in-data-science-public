@@ -1,8 +1,3 @@
----
-title: Model Publishing & Model Cards
-description: Licensing, responsible AI, model cards
----
-
 # Model Publishing & Model Cards
 
 _This is placeholder content for **Week 08 — MLOps, Fine-Tuning & Model Publishing** (May 2026). Replace sections below with lecture notes, examples, and exercises._

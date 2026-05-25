@@ -1,17 +1,8 @@
----
-id: github-pages
-title: GitHub Pages — Free Static Hosting for Every Repo
-sidebar_label: 09 · GitHub Pages
-sidebar_position: 10
-description: Host static sites — docs, portfolios, single-page apps — directly from a GitHub repo, for free.
-keywords: [github pages, static site, hosting, jekyll, docusaurus, custom domain]
----
-
 # 09 · GitHub Pages
 
-:::info TL;DR
+
+**Info: TL;DR**
 GitHub Pages hosts static websites straight out of a GitHub repository — for free, with HTTPS, and with your own domain if you want. Every IIT Madras student gets a free `.github.io` subdomain. This is where you'll host course labs, portfolios, and project demos for the rest of this course.
-:::
 
 ## What Can You Host?
 
@@ -28,7 +19,7 @@ Perfect fit:
 
 **Not a fit:** anything requiring a backend, database, or secret API key on the server. For those we'll use Cloud Run (Week 7) or HuggingFace Spaces (Week 2).
 
-<YouTube id="4xa90GTTq6Y" title="How to Deploy a Website to GitHub Pages" />
+[![How to Deploy a Website to GitHub Pages](https://i.ytimg.com/vi/4xa90GTTq6Y/hqdefault.jpg)](https://youtu.be/4xa90GTTq6Y)
 
 ## The Two Kinds of Sites
 
@@ -51,8 +42,7 @@ echo "# My Site" > README.md
 
 Create `index.html`:
 
-```html title="index.html"
-<!DOCTYPE html>
+```html<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -95,8 +85,7 @@ Wait ~30 seconds. Your site is live at `https://<username>.github.io/my-site/`.
 
 For any real project — especially if you're building a static site from source (React, Docusaurus, Hugo) — use GitHub Actions. This is how the TDS course site itself deploys.
 
-```yaml title=".github/workflows/deploy.yml"
-name: Deploy to GitHub Pages
+```yamlname: Deploy to GitHub Pages
 
 on:
   push:
@@ -158,14 +147,12 @@ Every push to `main` now triggers a build + deploy. You get a link to the deploy
 
 If you commit a folder that looks like a Jekyll site (with a `_config.yml`), GitHub Pages will build it for you — no Action needed.
 
-```yaml title="_config.yml"
-title: My Blog
+```yamltitle: My Blog
 description: Notes about things.
 theme: minima
 ```
 
-```markdown title="_posts/2026-05-10-hello.md"
----
+```markdown---
 layout: post
 title: "Hello, world"
 date: 2026-05-10

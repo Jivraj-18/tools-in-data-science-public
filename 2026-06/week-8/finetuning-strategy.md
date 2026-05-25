@@ -1,8 +1,3 @@
----
-title: Fine-Tuning Strategy
-description: Fine-tune vs RAG vs prompting; data cleaning
----
-
 # Fine-Tuning Strategy
 
 _This is placeholder content for **Week 08 — MLOps, Fine-Tuning & Model Publishing** (May 2026). Replace sections below with lecture notes, examples, and exercises._

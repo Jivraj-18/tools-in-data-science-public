@@ -1,8 +1,3 @@
----
-title: Agent Fundamentals
-description: ReAct, Plan-and-Execute, Reflexion, LATS
----
-
 # Agent Fundamentals
 
 Agents extend LLMs from simple text generators to autonomous systems capable of reasoning, using tools, and acting on the world. 

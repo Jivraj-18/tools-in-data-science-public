@@ -1,9 +1,3 @@
----
-sidebar_position: 4
-title: FastAPI Advanced
-description: WebSockets, background tasks, dependency injection, and lifespan events in FastAPI.
----
-
 id: fastapi-advanced
 # FastAPI Advanced
 
@@ -45,10 +39,10 @@ async def register_user(email: str, background_tasks: BackgroundTasks):
     return {"message": "Registered! Check your email.", "user_id": user_id}
 ```
 
-:::tip When to use Background Tasks vs Celery/Redis Queue?
+
+**Tip: When to use Background Tasks vs Celery/Redis Queue?**
 - **Background Tasks**: Fast jobs (&lt;30 seconds), no retry needed, simple
 - **Celery + Redis**: Long jobs, need retries, need progress tracking, distributed workers
-:::
 
 ---
 
@@ -274,8 +268,7 @@ def predict(features: list[float]):
 
 ## Putting It All Together
 
-```python title="main.py"
-from contextlib import asynccontextmanager
+```pythonfrom contextlib import asynccontextmanager
 from fastapi import FastAPI, Depends, BackgroundTasks, WebSocket
 import asyncpg, logging
 

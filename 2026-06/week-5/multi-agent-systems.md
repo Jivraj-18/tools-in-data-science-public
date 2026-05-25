@@ -1,8 +1,3 @@
----
-title: Multi-Agent Systems
-description: Supervisor, swarm, A2A protocol
----
-
 # Multi-Agent Systems
 
 When tasks become too complex for one prompt, we split them across multiple agents.

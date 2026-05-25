@@ -1,9 +1,3 @@
----
-sidebar_position: 3
-title: Hybrid Search
-description: Dense (semantic) + Sparse (BM25/SPLADE) retrieval fused with Reciprocal Rank Fusion — the retrieval strategy that beats pure vector search in almost every benchmark.
----
-
 # Hybrid Search
 
 > **Dense search finds synonyms. Sparse search finds exact terms. Hybrid search wins.**

@@ -1,12 +1,3 @@
----
-id: index
-title: Week 01 — Development Environment & Tooling
-sidebar_label: Overview
-sidebar_position: 1
-description: The foundation week — editors, package managers, Git, shells, and the tools you'll use for the rest of the course.
-keywords: [vs code, uv, bash, git, sqlite, http, requestly, latex, github pages, tooling]
----
-
 # Week 01 — Development Environment & Tooling
 
 > **You can't build good things with bad tools.** Week 1 is about installing, configuring, and _actually understanding_ the tools you'll use every single day for the next 7 weeks — and for the rest of your career.
@@ -48,9 +39,9 @@ You will build these three labs — each one ships something real to the interne
 2. **Lab 1.2 — [UV CLI tool + LaTeX documentation PDF on GitHub Pages](/2026-06/labs/week-1/uv-cli-tool-latex-docs)**
 3. **Lab 1.3 — [Bash automation script — daily project summary](/2026-06/labs/week-1/bash-daily-project-summary)**
 
-:::tip How to work through this week
+
+**Tip: How to work through this week**
 Read the topic, do the 5-minute mini-exercise at the bottom of each page, then move to the next. At the end of the week, complete the three labs. Finally, write a Discourse blog post about one concept you learned — teaching it back is the best way to learn.
-:::
 
 ## Required Software Checklist
 
@@ -65,16 +56,16 @@ Before starting, install these on your machine:
 | **sqlite-utils** | `uv tool install sqlite-utils` | Same | Same |
 | **httpie** | `brew install httpie` | `sudo apt install httpie` | `winget install HTTPie.HTTPie` |
 
-:::note Windows users
+
+**Note: Windows users**
 We strongly recommend using **WSL2 (Ubuntu)** on Windows. Most of the course assumes a Unix-like shell. Install WSL via `wsl --install` in an admin PowerShell and then do everything inside Ubuntu.
-:::
 
 ## Mindset for Week 1
 
 Most students rush to the "AI stuff" in later weeks and skip the fundamentals. **Don't.** Every hour you invest in mastering your editor, your shell, and Git pays back 100× in the weeks ahead. When the professor says "build a RAG chatbot", you don't want to be fighting with virtual environments — you want that to be muscle memory.
 
-:::info How to get help
+
+**Info: How to get help**
 - Read the official docs first — they're almost always better than Stack Overflow.
 - Ask good questions on [Discourse](https://discourse.onlinedegree.iitm.ac.in).
 - `--help` is your friend: every CLI tool documents itself.
-:::

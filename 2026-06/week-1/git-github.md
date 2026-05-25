@@ -1,17 +1,8 @@
----
-id: git-github
-title: Git & GitHub — Version Control Done Right
-sidebar_label: 04 · Git & GitHub
-sidebar_position: 5
-description: Git internals, branching, rebasing, stash, bisect, hooks, GitHub CLI, pull requests, and branch protection.
-keywords: [git, github, version control, branching, rebase, stash, bisect, hooks, pull requests, gh cli]
----
-
 # 04 · Git & GitHub
 
-:::info TL;DR
+
+**Info: TL;DR**
 **Git** is a distributed version control system created by Linus Torvalds in 2005. **GitHub** is a hosted Git service owned by Microsoft. Together they are how >90% of the world's software is built. Learn the mental model — don't just memorize commands.
-:::
 
 ## The Mental Model
 
@@ -25,7 +16,7 @@ graph LR
     D -->|git fetch / pull| C
 ```
 
-<YouTube id="hwP7WQkmECE" title="Git in 100 Seconds" />
+[![Git in 100 Seconds](https://i.ytimg.com/vi/hwP7WQkmECE/hqdefault.jpg)](https://youtu.be/hwP7WQkmECE)
 
 ## Install + Configure
 
@@ -86,9 +77,9 @@ git merge feature/login            # or: git rebase feature/login
 git branch -d feature/login        # delete
 ```
 
-:::tip `git switch` vs `git checkout`
+
+**Tip: `git switch` vs `git checkout`**
 The old `git checkout` does two unrelated things: switches branches AND restores files. In 2019 Git split this into `git switch` (branches) and `git restore` (files). Use them.
-:::
 
 ## Remotes — Connecting Local ↔ GitHub
 
@@ -137,9 +128,9 @@ git add -p app.py                  # interactively stage hunks
 | Undo last commit, throw away changes | `git reset --hard HEAD~1` ⚠️ |
 | Create a new commit that undoes another | `git revert <sha>` |
 
-:::warning `reset --hard` is destructive
+
+**Warning: `reset --hard` is destructive**
 `git reset --hard` throws away uncommitted work. If you accidentally nuke something, check `git reflog` — Git keeps a hidden log of every HEAD move for 90 days.
-:::
 
 ## Rebasing — Rewriting History
 
@@ -171,9 +162,9 @@ git rebase -i HEAD~5               # edit the last 5 commits
 
 Opens an editor with commands: `pick`, `reword`, `squash`, `fixup`, `drop`, etc.
 
-:::danger Never rebase public branches
+
+**Danger: Never rebase public branches**
 Only rebase commits that exist **only on your machine**. Rebasing commits that others have pulled creates painful conflicts for everyone.
-:::
 
 ## Stash — Temporary Shelf
 
@@ -224,8 +215,7 @@ Modern way: use **pre-commit** (Python tool):
 uv tool install pre-commit
 ```
 
-```yaml title=".pre-commit-config.yaml"
-repos:
+```yamlrepos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.11.0
     hooks:
@@ -247,8 +237,7 @@ git commit                # hooks now run automatically
 
 ## `.gitignore` — What Not to Commit
 
-```gitignore title=".gitignore"
-# Python
+```gitignore# Python
 __pycache__/
 *.py[cod]
 .venv/
@@ -274,9 +263,9 @@ data/raw/
 *.sqlite
 ```
 
-:::tip Use the community-maintained templates
+
+**Tip: Use the community-maintained templates**
 [github/gitignore](https://github.com/github/gitignore) has excellent starter `.gitignore` files for every language. Also `gitignore.io` generates combined templates.
-:::
 
 ## GitHub — The Hosted Side
 

@@ -1,9 +1,3 @@
----
-sidebar_position: 1
-title: Week 03 — LLM Engineering
-description: Master prompt engineering, context design, structured outputs, embeddings, cost control, and LLM architecture for production AI applications.
----
-
 # Week 03 — LLM Engineering
 
 > **Goal:** Stop treating LLMs as magic boxes. Learn to talk to them precisely, structure their outputs, control costs, and trace every call — so you ship reliable AI features.
@@ -60,9 +54,9 @@ Prompt Engineering ──→ Context Engineering ──→ Prompt Cache (save 90
 
 ---
 
-:::warning Project 1 — Due End of This Week
-**Project 1** covers all of Weeks 1–3: development tooling, deployment, and LLM engineering. See the Projects section when the specification is released.
-:::
+
+**Warning: Project 1**
+**Project 1** covers all of Weeks 1–3: development tooling, deployment, and LLM engineering. See the Projects section for the latest specification.
 
 ---
 

@@ -1,8 +1,3 @@
----
-title: Capstone Projects
-description: All capstones (placeholder)
----
-
 # Capstone Projects
 
 | # | Project | Week | Description |

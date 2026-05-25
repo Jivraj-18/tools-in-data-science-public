@@ -1,8 +1,3 @@
----
-title: Syllabus (2026)
-description: Week-by-week topics + hands-on labs
----
-
 # Syllabus (2026)
 
 Below is the full **8-week** course map (dummy pages for now).

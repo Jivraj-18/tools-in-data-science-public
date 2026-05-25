@@ -1,8 +1,3 @@
----
-title: Video Understanding
-description: ffmpeg frame extraction, video LLMs, temporal reasoning
----
-
 # Video Understanding
 
 Video is just an array of images plus an audio track.

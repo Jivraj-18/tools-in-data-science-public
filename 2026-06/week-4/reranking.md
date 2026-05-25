@@ -1,9 +1,3 @@
----
-sidebar_position: 5
-title: Reranking
-description: Two-stage retrieval — fast first-stage retrieval + accurate cross-encoder reranking. The pattern that consistently beats single-stage approaches.
----
-
 # Reranking
 
 > Retrieve many, rerank few, pass the best to the LLM.

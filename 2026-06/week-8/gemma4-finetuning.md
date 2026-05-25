@@ -1,8 +1,3 @@
----
-title: Gemma 4 Fine-Tuning
-description: Unsloth, evaluation, upload
----
-
 # Gemma 4 Fine-Tuning
 
 _This is placeholder content for **Week 08 — MLOps, Fine-Tuning & Model Publishing** (May 2026). Replace sections below with lecture notes, examples, and exercises._

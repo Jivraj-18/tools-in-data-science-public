@@ -1,8 +1,3 @@
----
-title: Capstone — Production Fine-Tuned Model + Full MLOps
-description: QLoRA → MLflow → Vertex AI → HF publish (dummy).
----
-
 # Capstone — Production Fine-Tuned Model + Full MLOps
 
 _This is placeholder content for **Week 08 — MLOps, Fine-Tuning & Model Publishing**._

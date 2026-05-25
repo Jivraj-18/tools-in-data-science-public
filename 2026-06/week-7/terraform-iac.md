@@ -1,8 +1,3 @@
----
-title: IaC Basics (Terraform)
-description: Providers, resources, state files
----
-
 # IaC Basics (Terraform)
 
 _This is placeholder content for **Week 07 — CI/CD, Security & Cloud Infrastructure** (May 2026). Replace sections below with lecture notes, examples, and exercises._

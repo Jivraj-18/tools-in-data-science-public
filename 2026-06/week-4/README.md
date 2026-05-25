@@ -1,9 +1,3 @@
----
-sidebar_position: 1
-title: Week 4 — RAG & Hybrid RAG
-description: Master Retrieval-Augmented Generation — from chunking to production-grade hybrid pipelines with RAGAS evaluation.
----
-
 # Week 4 — RAG & Hybrid RAG
 
 > **"Your LLM is only as good as what you put in its context."**  

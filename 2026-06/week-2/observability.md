@@ -1,9 +1,3 @@
----
-sidebar_position: 9
-title: Observability
-description: Monitor FastAPI applications with Prometheus metrics, OpenTelemetry traces, and Grafana dashboards.
----
-
 id: observability
 import { YouTube } from '@site/src/components/YouTube';
 
@@ -29,8 +23,7 @@ uv add prometheus-fastapi-instrumentator
 
 ### Auto-Instrument FastAPI
 
-```python title="main.py"
-from fastapi import FastAPI
+```pythonfrom fastapi import FastAPI
 from prometheus_fastapi_instrumentator import Instrumentator
 
 app = FastAPI()
@@ -94,8 +87,7 @@ uv add opentelemetry-api opentelemetry-sdk \
        opentelemetry-exporter-otlp-proto-grpc
 ```
 
-```python title="telemetry.py"
-from opentelemetry import trace
+```pythonfrom opentelemetry import trace
 from opentelemetry.sdk.trace import TracerProvider
 from opentelemetry.sdk.trace.export import BatchSpanProcessor
 from opentelemetry.exporter.otlp.proto.grpc.trace_exporter import OTLPSpanExporter
@@ -117,8 +109,7 @@ def setup_telemetry(app, service_name: str = "tds-api"):
     return trace.get_tracer(service_name)
 ```
 
-```python title="main.py"
-from telemetry import setup_telemetry
+```pythonfrom telemetry import setup_telemetry
 from opentelemetry import trace
 
 app = FastAPI()
@@ -150,8 +141,7 @@ The trace shows: `fetch-user (45ms) → db-query (40ms) + cache-set (5ms)`
 
 The full observability stack in Compose:
 
-```yaml title="docker-compose.yml"
-version: "3.9"
+```yamlversion: "3.9"
 
 services:
   # Your FastAPI app
@@ -200,8 +190,7 @@ volumes:
   grafana_data:
 ```
 
-```yaml title="prometheus.yml"
-global:
+```yamlglobal:
   scrape_interval: 15s
 
 scrape_configs:
@@ -244,8 +233,7 @@ http_requests_active
 
 ## Alert Rules
 
-```yaml title="prometheus-rules.yml"
-groups:
+```yamlgroups:
   - name: api-alerts
     rules:
       - alert: HighErrorRate
@@ -267,7 +255,7 @@ groups:
 
 ## Video Reference
 
-<YouTube id="h4Sl21AKiDg" title="Prometheus and Grafana Tutorial" />
+[![Prometheus and Grafana Tutorial](https://i.ytimg.com/vi/h4Sl21AKiDg/hqdefault.jpg)](https://youtu.be/h4Sl21AKiDg)
 
 ---
 

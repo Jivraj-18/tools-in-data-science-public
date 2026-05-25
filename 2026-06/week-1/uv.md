@@ -1,17 +1,8 @@
----
-id: uv
-title: UV — The Python Package Manager You Should Be Using
-sidebar_label: 02 · UV
-sidebar_position: 3
-description: UV is the Rust-powered Python package manager from Astral. It replaces pip, virtualenv, pyenv, pipx, pip-tools, and poetry in a single binary — and it's 10-100x faster.
-keywords: [uv, astral, python, pip, virtualenv, pyenv, poetry, pyproject.toml, package manager]
----
-
 # 02 · UV — The Python Package Manager
 
-:::info TL;DR
+
+**Info: TL;DR**
 `uv` is a single, blazingly fast binary from [Astral](https://astral.sh) (the team behind Ruff) that replaces **pip + virtualenv + pyenv + pipx + pip-tools + poetry**. In April 2026 it's at version **0.11.7** and is the default recommendation for all new Python projects at IIT Madras.
-:::
 
 ## Why UV?
 
@@ -39,7 +30,7 @@ uv add fastapi uvicorn               # ⚡ < 1 second
 uv run python main.py
 ```
 
-<YouTube id="6E7Zvl_4Cdw" title="uv — The Future of Python Tooling (Astral)" />
+[![uv — The Future of Python Tooling (Astral)](https://i.ytimg.com/vi/6E7Zvl_4Cdw/hqdefault.jpg)](https://youtu.be/6E7Zvl_4Cdw)
 
 ## Install UV
 
@@ -110,8 +101,7 @@ uv add --script example.py requests rich
 
 This adds a PEP 723 header to `example.py`:
 
-```python title="example.py"
-# /// script
+```python# /// script
 # requires-python = ">=3.12"
 # dependencies = [
 #     "requests",
@@ -131,9 +121,9 @@ uv run example.py
 # ✨ Creates a cached venv, installs requests + rich, runs the script
 ```
 
-:::tip No more activating virtualenvs
+
+**Tip: No more activating virtualenvs**
 `uv run` auto-creates and caches a venv per set of dependencies. You never type `source .venv/bin/activate` again.
-:::
 
 ## Way 2 — Full Projects with `pyproject.toml`
 
@@ -166,8 +156,7 @@ uv add --optional plot matplotlib        # optional extra
 
 This updates `pyproject.toml`:
 
-```toml title="pyproject.toml"
-[project]
+```toml[project]
 name = "my-library"
 version = "0.1.0"
 requires-python = ">=3.13"
@@ -279,8 +268,7 @@ cat requirements.txt | xargs uv add
 
 ## UV in CI (GitHub Actions)
 
-```yaml title=".github/workflows/ci.yml"
-name: CI
+```yamlname: CI
 on: [push, pull_request]
 
 jobs:
@@ -308,8 +296,7 @@ No `actions/setup-python` needed — `uv` does that itself.
 
 For a monorepo with multiple Python packages:
 
-```toml title="pyproject.toml (root)"
-[tool.uv.workspace]
+```toml[tool.uv.workspace]
 members = ["packages/*", "apps/*"]
 ```
 
@@ -337,17 +324,17 @@ uv add --package api core       # cross-package dep
 
 ## Common Pitfalls
 
-:::warning Don't mix `pip install` into a `uv`-managed project
+
+**Warning: Don't mix `pip install` into a `uv`-managed project**
 Never run `pip install ...` inside a project that already has a `uv.lock`. It will desynchronize the lockfile. Always use `uv add`, `uv remove`, or `uv sync`.
-:::
 
-:::warning Don't commit `.venv/`
+
+**Warning: Don't commit `.venv/`**
 Your `.gitignore` should include `.venv/`. Commit `pyproject.toml` and `uv.lock` instead — they are the source of truth. Anyone who clones your repo runs `uv sync` and gets an identical env.
-:::
 
-:::tip CI always uses `--frozen`
+
+**Tip: CI always uses `--frozen`**
 In CI, use `uv sync --frozen`. This fails fast if someone adds a dep but forgets to commit `uv.lock`.
-:::
 
 ## 5-Minute Exercise
 

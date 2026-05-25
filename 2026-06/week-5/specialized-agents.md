@@ -1,8 +1,3 @@
----
-title: Specialized Agents
-description: Code execution, browser, image analysis
----
-
 # Specialized Agents
 
 General agents are jack-of-all-trades. Specialized agents excel at one specific modality.

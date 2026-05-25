@@ -1,8 +1,3 @@
----
-title: Hands-on — Week 02
-description: Labs and capstones for Week 02 — Deployment & API Engineering
----
-
 # Hands-on — Week 02 — Deployment & API Engineering
 
 Build and ship real APIs with FastAPI, Docker, auth, observability, and caching. Focus is on production-style services and deployment workflows.

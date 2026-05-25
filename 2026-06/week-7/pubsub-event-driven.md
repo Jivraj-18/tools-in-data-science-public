@@ -1,8 +1,3 @@
----
-title: Pub/Sub & Event-Driven
-description: Pub/Sub, Kafka basics, fan-out
----
-
 # Pub/Sub & Event-Driven
 
 _This is placeholder content for **Week 07 — CI/CD, Security & Cloud Infrastructure** (May 2026). Replace sections below with lecture notes, examples, and exercises._

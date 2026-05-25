@@ -1,8 +1,3 @@
----
-title: Anti-bot Patterns
-description: Rotating proxies, user-agent spoofing, rate limiting, CAPTCHA
----
-
 # Anti-bot Patterns
 
 Websites actively try to block scrapers. You must learn to blend in.

@@ -1,17 +1,8 @@
----
-id: latex
-title: LaTeX — Professional Documents with Math and Citations
-sidebar_label: 10 · LaTeX
-sidebar_position: 11
-description: Produce publication-quality PDFs — papers, reports, thesis — with math, equations, citations, and bibliographies.
-keywords: [latex, overleaf, bibtex, pandoc, tex, pdf, math, documents]
----
-
 # 10 · LaTeX
 
-:::info TL;DR
+
+**Info: TL;DR**
 LaTeX is the typesetting system universities and scientific journals have used for 40 years. It separates content from layout, produces stunning PDFs, and makes equations + references feel automatic. You'll use it to generate the PDF documentation in **Lab 1.2** and any project report you write.
-:::
 
 ## Why LaTeX?
 
@@ -23,7 +14,7 @@ For most writing, Markdown is easier. But LaTeX is essential when you need:
 - **Journal / conference templates** — NeurIPS, IEEE, ACM all publish `.tex` templates.
 - **Reproducible PDFs** — source control a `.tex` file; anyone running `pdflatex` gets the same output.
 
-<YouTube id="ydOTMQC7np0" title="LaTeX Tutorial - A Complete Beginner's Guide" />
+[![LaTeX Tutorial - A Complete Beginner's Guide](https://i.ytimg.com/vi/ydOTMQC7np0/hqdefault.jpg)](https://youtu.be/ydOTMQC7np0)
 
 ## The Two Ways to Use LaTeX
 
@@ -82,8 +73,7 @@ pandoc --version
 
 ## Your First Document
 
-```latex title="hello.tex"
-\documentclass[11pt]{article}
+```latex\documentclass[11pt]{article}
 
 \usepackage[a4paper,margin=1in]{geometry}
 \usepackage{hyperref}              % clickable links
@@ -118,12 +108,12 @@ Compile:
 pdflatex hello.tex         # creates hello.pdf
 ```
 
-:::tip Two compiles for correct cross-refs
+
+**Tip: Two compiles for correct cross-refs**
 LaTeX needs **two passes** to resolve forward references (table of contents, `\ref{}`, page numbers). Always run `pdflatex` twice, or use `latexmk`:
 ```bash
 latexmk -pdf hello.tex
 ```
-:::
 
 ## Essential Structure Commands
 
@@ -242,8 +232,7 @@ For prettier tables, use the `booktabs` package (`\toprule`, `\midrule`, `\botto
 
 Create a `references.bib` file:
 
-```bibtex title="references.bib"
-@article{vaswani2017attention,
+```bibtex@article{vaswani2017attention,
   title   = {Attention Is All You Need},
   author  = {Vaswani, Ashish and others},
   journal = {NeurIPS},
@@ -297,8 +286,7 @@ pandoc docs/intro.md -o intro.pdf \
 
 Create `template.tex` to control the look:
 
-```latex title="template.tex"
-\documentclass[11pt, a4paper]{article}
+```latex\documentclass[11pt, a4paper]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{hyperref}
 \usepackage{fancyhdr}
@@ -364,16 +352,16 @@ clean:
 
 ## Common Pitfalls
 
-:::warning Special characters need escaping
+
+**Warning: Special characters need escaping**
 These characters have special meaning in LaTeX: `& % $ # _ { } ~ ^ \`
 To print them literally: `\& \% \$ \# \_ \{ \} \~{} \^{} \textbackslash`
 
 Pandoc handles this for you when converting from Markdown.
-:::
 
-:::tip Missing packages
+
+**Tip: Missing packages**
 `! LaTeX Error: File `xxx.sty' not found.` On TeX Live, install with `sudo tlmgr install xxx`. On MiKTeX, it auto-installs on demand.
-:::
 
 ## 5-Minute Exercise
 

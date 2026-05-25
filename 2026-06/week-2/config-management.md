@@ -1,17 +1,11 @@
----
-sidebar_position: 5
-title: Config Management
-description: Manage secrets, environment variables, and configuration using pydantic-settings, python-dotenv, and 12-factor app principles.
----
-
 id: config-management
 # Config Management
 
 Your code should be the same in development, staging, and production. Only the **configuration** should differ. This is the core idea behind the [12-Factor App](https://12factor.net/config) methodology — and `pydantic-settings` makes it easy.
 
-:::danger Never hardcode secrets in your code
+
+**Danger: Never hardcode secrets in your code**
 If you push `API_KEY = "sk-abc123"` to GitHub, that secret is compromised — even if you delete it in the next commit. Git history keeps it forever.
-:::
 
 ---
 
@@ -30,8 +24,7 @@ This means:
 
 For local development, a `.env` file holds your environment variables:
 
-```bash title=".env"
-DATABASE_URL=postgresql://localhost/mydb
+```bashDATABASE_URL=postgresql://localhost/mydb
 OPENAI_API_KEY=sk-your-key-here
 SECRET_KEY=my-super-secret-key
 DEBUG=true
@@ -65,8 +58,7 @@ port = int(os.getenv("PORT", "8000"))    # with default
 uv add pydantic-settings
 ```
 
-```python title="config.py"
-from pydantic_settings import BaseSettings, SettingsConfigDict
+```pythonfrom pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import AnyUrl, SecretStr
 from typing import Optional
 
@@ -110,8 +102,7 @@ Much better than a `KeyError` deep in your code at 3am in production.
 
 ### The `lru_cache` Pattern (Singleton)
 
-```python title="config.py"
-from functools import lru_cache
+```pythonfrom functools import lru_cache
 from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
@@ -129,8 +120,7 @@ def get_settings() -> Settings:
     return Settings()
 ```
 
-```python title="main.py"
-from fastapi import FastAPI, Depends
+```pythonfrom fastapi import FastAPI, Depends
 from config import Settings, get_settings
 
 app = FastAPI()
@@ -168,8 +158,7 @@ print(settings.api_key.get_secret_value())  # my-secret
 
 ### Environment-Specific Config
 
-```python title="config.py"
-import os
+```pythonimport os
 from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
@@ -235,8 +224,7 @@ my-api/
 └── pyproject.toml
 ```
 
-```bash title=".env.example"
-# Copy this to .env and fill in your values
+```bash# Copy this to .env and fill in your values
 DATABASE_URL=postgresql://localhost/mydb
 SECRET_KEY=generate-with-openssl-rand-hex-32
 OPENAI_API_KEY=sk-...

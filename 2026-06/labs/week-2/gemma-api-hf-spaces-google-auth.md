@@ -1,8 +1,3 @@
----
-title: Lab — Publish a Gemma model API on HuggingFace Spaces with Google Auth
-description: Secure a hosted demo API.
----
-
 # Lab — Publish a Gemma model API on HuggingFace Spaces with Google Auth
 
 ## Objective

@@ -1,8 +1,3 @@
----
-title: Week 05 Labs
-sidebar_position: 1
----
-
 # Week 05 Labs & Capstones
 
 This directory contains the practical assignments for Week 5: Agentic AI.

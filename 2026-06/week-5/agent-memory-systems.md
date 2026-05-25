@@ -1,8 +1,3 @@
----
-title: Agent Memory Systems
-description: Short-term, long-term, episodic, semantic
----
-
 # Agent Memory Systems
 
 Without memory, agents are goldfish. Memory gives them continuity.

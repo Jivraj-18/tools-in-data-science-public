@@ -1,8 +1,3 @@
----
-title: Projects
-description: Milestones after Week 3, Week 6, and end of course
----
-
 # Projects
 
 These are the **graded** project milestones (specs will be decided later).

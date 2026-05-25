@@ -1,8 +1,3 @@
----
-title: Agent Evaluation
-description: AgentBench, GAIA benchmark, failure analysis
----
-
 # Agent Evaluation
 
 Evaluating agents is harder than evaluating text generation because agents have open-ended trajectories.

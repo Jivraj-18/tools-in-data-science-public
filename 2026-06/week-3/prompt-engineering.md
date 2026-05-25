@@ -1,18 +1,12 @@
----
-sidebar_position: 1
-title: Prompt Engineering
-description: Master zero-shot, few-shot, Chain-of-Thought, Self-Consistency, Tree-of-Thought, and role prompting to reliably extract the outputs you need from any LLM.
----
-
 import { YouTube } from '@site/src/components/YouTube';
 
 # Prompt Engineering
 
 Prompt engineering is the practice of crafting inputs that reliably get the output you need from a language model. It is not about "magic words" — it is about understanding how LLMs process text and designing prompts that make the task unambiguous.
 
-:::info One key insight
+
+**Info: One key insight**
 LLMs are **next-token predictors**. The best prompt is the one that makes your desired output the most statistically likely continuation of the input.
-:::
 
 ---
 
@@ -417,7 +411,7 @@ Confidence: [0.0-1.0]"""
 
 ## Video Reference
 
-<YouTube id="dOxUroR57xs" title="Prompt Engineering Guide" />
+[![Prompt Engineering Guide](https://i.ytimg.com/vi/dOxUroR57xs/hqdefault.jpg)](https://youtu.be/dOxUroR57xs)
 
 ---
 

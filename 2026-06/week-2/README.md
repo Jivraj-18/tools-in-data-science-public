@@ -1,9 +1,3 @@
----
-sidebar_position: 1
-title: Week 02 — Deployment & API Engineering
-description: Build production-ready APIs with FastAPI, containerize with Docker, add observability, and deploy to the cloud.
----
-
 import { YouTube } from '@site/src/components/YouTube';
 
 # Week 02 — Deployment & API Engineering
@@ -88,6 +82,6 @@ Build bottom-up. Get the app working first, then containerize, then observe.
 
 ---
 
-:::tip Week 2 in one sentence
+
+**Tip: Week 2 in one sentence**
 **FastAPI + Docker + Prometheus = production-ready API.** Everything else this week supports these three pillars.
-:::

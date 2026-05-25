@@ -1,8 +1,3 @@
----
-title: Cost Alerting & Budget Caps
-description: Billing alerts, spend limits
----
-
 # Cost Alerting & Budget Caps
 
 _This is placeholder content for **Week 07 — CI/CD, Security & Cloud Infrastructure** (May 2026). Replace sections below with lecture notes, examples, and exercises._

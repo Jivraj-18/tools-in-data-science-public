@@ -1,9 +1,3 @@
----
-sidebar_position: 7
-title: Multimodal Embeddings
-description: Embed images and text in the same vector space — ColPali, CLIP, and multi-vector retrieval for PDFs and mixed-media documents.
----
-
 # Multimodal Embeddings
 
 > Text-only RAG misses 80% of real-world documents — PDFs with charts, tables, figures. Multimodal embeddings fix that.

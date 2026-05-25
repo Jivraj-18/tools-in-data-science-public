@@ -1,8 +1,3 @@
----
-title: Firestore Database
-description: NoSQL, real-time listeners, security rules
----
-
 # Firestore Database
 
 Firestore is Google's serverless NoSQL document database.

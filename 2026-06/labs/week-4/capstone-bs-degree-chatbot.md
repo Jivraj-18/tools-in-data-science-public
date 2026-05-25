@@ -1,9 +1,3 @@
----
-sidebar_position: 2
-title: "Capstone: BS Degree Chatbot"
-description: Build a production hybrid RAG chatbot for the IIT Madras BS Degree portal — with RAGAS evaluation dashboard comparing retrieval strategies.
----
-
 import Details from '@theme/Details';
 
 # Capstone C1: BS Degree Chatbot
@@ -20,7 +14,7 @@ A production-grade RAG chatbot that answers questions about the IIT Madras BS Da
 
 - Eligibility, admission, fees, course structure
 - Degree requirements, credit rules
-- Exam schedules, deadlines
+- Exam schedules and timeline details
 - Contact information
 
 ```

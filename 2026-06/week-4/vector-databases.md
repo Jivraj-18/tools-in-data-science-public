@@ -1,9 +1,3 @@
----
-sidebar_position: 2
-title: Vector Databases
-description: FAISS, ChromaDB, Qdrant, PGVector — understand what each does, when to use it, and how to build with all four.
----
-
 import Details from '@theme/Details';
 
 # Vector Databases

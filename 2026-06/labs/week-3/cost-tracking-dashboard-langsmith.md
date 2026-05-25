@@ -1,9 +1,3 @@
----
-sidebar_position: 3
-title: "Lab 3.2 — Cost-Tracking Dashboard via LangSmith"
-description: Build a prompt strategy benchmarking system using LangSmith tracing, compare zero-shot vs few-shot vs CoT vs Self-Consistency by token cost, and expose a FastAPI cost-analytics dashboard.
----
-
 # Lab 3.2 — Cost-Tracking Dashboard via LangSmith
 
 **What you'll build:** A benchmark system that runs the same task using four different prompt strategies — zero-shot, few-shot, Chain-of-Thought, and Self-Consistency — traces every call to LangSmith, then exposes a FastAPI endpoint that returns a live cost comparison dashboard.
@@ -59,8 +53,7 @@ uv add fastapi "uvicorn[standard]" openai anthropic \
 ```
 
 Create `.env`:
-```bash title=".env"
-ANTHROPIC_API_KEY=sk-ant-...
+```bashANTHROPIC_API_KEY=sk-ant-...
 OPENAI_API_KEY=sk-...
 LANGCHAIN_TRACING_V2=true
 LANGCHAIN_API_KEY=ls__...
@@ -92,8 +85,7 @@ tds-lab-3-2/
 
 These are the tasks we'll run all four strategies on. They cover the main categories where strategies differ in performance and cost:
 
-```python title="tasks.py"
-"""
+```python"""
 Benchmark task definitions.
 Each task is a dict with 'input' and 'expected_answer' for accuracy checking.
 """
@@ -164,8 +156,7 @@ BENCHMARK_TASKS = [
 <details>
 <summary>**Step 3 — Implement the Four Prompt Strategies**</summary>
 
-```python title="strategies.py"
-"""
+```python"""
 Four prompt engineering strategies, all traced to LangSmith.
 Each function returns: {answer, tokens_used, cost_usd, strategy}
 """
@@ -412,8 +403,7 @@ Think step by step. Give the final answer on the last line as: Answer: [your ans
 <details>
 <summary>**Step 4 — Build the Benchmark Runner**</summary>
 
-```python title="benchmark.py"
-"""
+```python"""
 Run all four strategies on all tasks and save results.
 All calls are traced to LangSmith automatically via @traceable.
 """
@@ -592,8 +582,7 @@ Now check [smith.langchain.com](https://smith.langchain.com) → your project �
 <details>
 <summary>**Step 5 — Query LangSmith for Analytics**</summary>
 
-```python title="langsmith_client.py"
-"""
+```python"""
 Query the LangSmith API to fetch cost and performance data from our benchmark runs.
 """
 import os
@@ -720,8 +709,7 @@ def get_cost_by_category(project_name: str = None, hours_back: int = 24) -> dict
 <details>
 <summary>**Step 6 — Build the FastAPI Dashboard Endpoint**</summary>
 
-```python title="dashboard.py"
-"""
+```python"""
 FastAPI service exposing cost analytics from LangSmith.
 Run with: uvicorn dashboard:app --reload
 """
@@ -1003,8 +991,7 @@ print("4. Does CoT help for classification tasks?")
 <details>
 <summary>**Step 9 — Write Tests**</summary>
 
-```python title="tests/test_strategies.py"
-"""
+```python"""
 Tests for prompt strategies.
 These make real API calls — set OPENAI_API_KEY in .env.
 Skip in CI if no key is set.
@@ -1064,8 +1051,7 @@ class TestLangSmithClient:
             pytest.skip("LangSmith not configured")
 ```
 
-```python title="tests/test_tasks.py"
-from tasks import BENCHMARK_TASKS, Task
+```pythonfrom tasks import BENCHMARK_TASKS, Task
 
 def test_all_tasks_have_required_fields():
     for task in BENCHMARK_TASKS:

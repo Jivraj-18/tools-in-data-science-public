@@ -1,9 +1,3 @@
----
-sidebar_position: 3
-title: "Capstone: Policy Chatbot (Nirmaan)"
-description: Build a RAG chatbot for policy documents with Google OAuth authentication and NeMo Guardrails for safe, on-topic responses.
----
-
 import Details from '@theme/Details';
 
 # Capstone C2: Policy Chatbot (Nirmaan)

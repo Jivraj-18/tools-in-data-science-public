@@ -1,8 +1,3 @@
----
-title: Capstone — AI Signature Detection & Cropper
-description: Grounding DINO, Ollama, OpenCV
----
-
 # Capstone — AI Signature Detection & Cropper
 
 ## Objective

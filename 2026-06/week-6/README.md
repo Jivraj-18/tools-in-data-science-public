@@ -1,9 +1,3 @@
----
-title: Week 06 — Web Scraping & Data Processing
-description: Automate browsers, parse documents, and build data pipelines.
-sidebar_position: 1
----
-
 # Week 06 — Web Scraping & Data Processing
 
 > **"Data is the new oil, but you have to drill for it."**

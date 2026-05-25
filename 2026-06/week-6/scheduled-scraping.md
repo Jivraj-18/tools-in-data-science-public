@@ -1,8 +1,3 @@
----
-title: Scheduled Scraping
-description: GitHub Actions cron, incremental updates, deduplication
----
-
 # Scheduled Scraping
 
 Data is only useful if it's fresh.

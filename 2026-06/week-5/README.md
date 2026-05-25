@@ -1,9 +1,3 @@
----
-title: Week 05 — Agentic AI
-description: Build autonomous systems with ReAct, LangGraph, and MCP.
-sidebar_position: 1
----
-
 # Week 05 — Agentic AI
 
 > **"LLMs generate text. Agents get things done."**

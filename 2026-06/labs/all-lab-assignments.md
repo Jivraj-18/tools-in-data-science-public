@@ -1,8 +1,3 @@
----
-title: All Lab Assignments
-description: Weekly hands-on list (placeholder)
----
-
 # All Lab Assignments
 
 ## Week 01 — Development Environment & Tooling

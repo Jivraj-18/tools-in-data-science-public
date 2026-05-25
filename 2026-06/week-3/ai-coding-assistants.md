@@ -1,9 +1,3 @@
----
-sidebar_position: 4
-title: AI Coding Assistants
-description: Practical workflows for Claude Code, Gemini CLI, GitHub Copilot, and Cursor — how to use each effectively for real development tasks.
----
-
 # AI Coding Assistants
 
 AI coding assistants are not just autocomplete. Used well, they can write, test, refactor, and explain entire codebases. Used poorly, they produce confident-sounding but wrong code. This page is about using them well.
@@ -75,8 +69,7 @@ Do not change any tests."
 
 Claude Code automatically reads `CLAUDE.md` at the root of your project. This is your opportunity to give Claude Code permanent context about your project.
 
-```markdown title="CLAUDE.md"
-# My Project
+```markdown# My Project
 
 ## Quick Start
 ```bash
@@ -268,8 +261,7 @@ Walk me through how a request flows from HTTP to database and back."
 
 ### Cursor Rules (.cursorrules)
 
-```markdown title=".cursorrules"
-You are helping me build a FastAPI service for the TDS course at IIT Madras.
+```markdownYou are helping me build a FastAPI service for the TDS course at IIT Madras.
 
 ## Tech Stack
 - Python 3.12, FastAPI, asyncpg, Redis, UV
@@ -330,7 +322,8 @@ The best developers use AI assistants **as a pair programmer**, not as a vending
    "The test for rate limit exceeded returns 500 instead of 429. Fix it."
 ```
 
-:::danger Never blindly accept AI-generated code in these areas
+
+**Danger: Never blindly accept AI-generated code in these areas**
 - Authentication and authorization logic
 - Password hashing or crypto
 - SQL queries (SQL injection risk)
@@ -338,4 +331,3 @@ The best developers use AI assistants **as a pair programmer**, not as a vending
 - Any code that handles PII
 
 Always write these yourself and review them carefully.
-:::

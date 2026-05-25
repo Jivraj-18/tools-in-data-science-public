@@ -1,14 +1,8 @@
----
-sidebar_position: 10
-title: GraphRAG
-description: Microsoft's GraphRAG — build a knowledge graph from your documents to answer global questions that pure vector search can't handle.
----
-
 # GraphRAG
 
 > Vector search finds similar passages. GraphRAG finds patterns, relationships, and themes across the entire corpus.
 
-<YouTube id="r09tJfON6kE" title="GraphRAG Explained — Microsoft Research" />
+[![GraphRAG Explained — Microsoft Research](https://i.ytimg.com/vi/r09tJfON6kE/hqdefault.jpg)](https://youtu.be/r09tJfON6kE)
 
 ---
 

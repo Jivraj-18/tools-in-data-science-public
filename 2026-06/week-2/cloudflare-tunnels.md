@@ -1,9 +1,3 @@
----
-sidebar_position: 10
-title: CloudFlare Tunnels
-description: Expose your localhost FastAPI server to the internet securely using cloudflared HTTPS tunnels — no port forwarding, no public IP needed.
----
-
 id: cloudflare-tunnels
 # CloudFlare Tunnels
 

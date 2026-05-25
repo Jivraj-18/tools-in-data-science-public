@@ -1,8 +1,3 @@
----
-title: Introduction
-description: Tools in Data Science (TDS) — May 2026
----
-
 # Tools in Data Science (TDS) — May 2026
 
 This site is the course portal for **Tools in Data Science** (IIT Madras · BS Data Science Programme · May Term).
@@ -20,6 +15,6 @@ This curriculum focuses on the current AI engineering stack: modern developer to
 2. Complete the **Hands-on Labs** every week.
 3. Publish optional Discourse blogs (non-graded, indexed on the portal).
 
-:::tip Start here
+
+**Tip: Start here**
 Go to [Syllabus](./syllabus) for the full week-by-week map.
-:::

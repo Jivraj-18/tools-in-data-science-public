@@ -1,8 +1,3 @@
----
-title: LXD Sandboxing
-description: Secure code execution environments
----
-
 # LXD Sandboxing
 
 Giving an AI agent the ability to execute code is extremely dangerous without isolation.

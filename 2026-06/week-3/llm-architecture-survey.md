@@ -1,9 +1,3 @@
----
-sidebar_position: 11
-title: LLM Architecture Survey
-description: Understand Transformer internals, GPT vs BERT, Mixture-of-Experts, CLIP/BLIP multimodal architectures, and where the SoTA models of 2025-2026 sit.
----
-
 import { YouTube } from '@site/src/components/YouTube';
 
 # LLM Architecture Survey
@@ -327,7 +321,7 @@ print("temp=2.0:", ["the", "a", "this", "one"][sample_with_temperature(logits, 2
 
 ## Video Reference
 
-<YouTube id="wjZofJX0v4M" title="But what is a GPT? Visual intro to transformers" />
+[![But what is a GPT? Visual intro to transformers](https://i.ytimg.com/vi/wjZofJX0v4M/hqdefault.jpg)](https://youtu.be/wjZofJX0v4M)
 
 ---
 

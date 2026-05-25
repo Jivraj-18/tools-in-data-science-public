@@ -1,8 +1,3 @@
----
-title: GCP ML Pipeline
-description: Train → eval → register → deploy → monitor
----
-
 # GCP ML Pipeline
 
 _This is placeholder content for **Week 08 — MLOps, Fine-Tuning & Model Publishing** (May 2026). Replace sections below with lecture notes, examples, and exercises._

@@ -1,8 +1,3 @@
----
-title: LangGraph
-description: Stateful graphs, checkpointers, human-in-loop
----
-
 # LangGraph
 
 LangGraph models agent workflows as state machines (graphs).

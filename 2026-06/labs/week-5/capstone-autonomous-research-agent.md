@@ -1,8 +1,3 @@
----
-title: Capstone — Autonomous Research Agent
-description: LangGraph multi-agent system
----
-
 # Capstone — Autonomous Research Agent
 
 ## Objective

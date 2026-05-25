@@ -1,8 +1,3 @@
----
-title: Hands-on Labs
-description: Labs + capstone projects for all weeks
----
-
 # Hands-on Labs
 
 In this course, **Hands-on Labs** includes both:

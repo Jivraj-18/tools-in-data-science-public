@@ -1,20 +1,14 @@
----
-sidebar_position: 7
-title: Vector Embeddings
-description: Understand and use vector embeddings with BGE-M3, text-embedding-3-small, and Cohere — dimensionality, cosine similarity, and practical extraction patterns.
----
-
 import { YouTube } from '@site/src/components/YouTube';
 
 # Vector Embeddings
 
 An **embedding** is a fixed-length list of numbers (a vector) that represents the meaning of a text. Texts with similar meanings have vectors that are close to each other in high-dimensional space. This is the mathematical foundation of semantic search, RAG, and recommendation systems.
 
-:::info Intuition
+
+**Info: Intuition**
 "King" − "Man" + "Woman" ≈ "Queen"
 
 This isn't magic — embeddings place semantically related words in similar geometric regions of the vector space.
-:::
 
 ---
 
@@ -310,7 +304,7 @@ query_embedding = embed_cohere([query], input_type="search_query")[0]
 
 ## Video Reference
 
-<YouTube id="ySus5ZS0b94" title="Word Embeddings and Word2Vec" />
+[![Word Embeddings and Word2Vec](https://i.ytimg.com/vi/ySus5ZS0b94/hqdefault.jpg)](https://youtu.be/ySus5ZS0b94)
 
 ---
 

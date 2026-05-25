@@ -1,9 +1,3 @@
----
-sidebar_position: 1
-title: FastAPI Fundamentals
-description: Build type-safe REST APIs with automatic docs, path params, request bodies, and response models using FastAPI.
----
-
 id: fastapi
 import { YouTube } from '@site/src/components/YouTube';
 
@@ -11,12 +5,12 @@ import { YouTube } from '@site/src/components/YouTube';
 
 FastAPI is a modern Python web framework that gives you **automatic API documentation**, **type checking at runtime**, and performance close to NodeJS and Go — all from plain Python type hints.
 
-:::info Why FastAPI over Flask/Django?
+
+**Info: Why FastAPI over Flask/Django?**
 - **Auto docs** — Swagger UI and ReDoc generated from your code, zero config
 - **Pydantic validation** — request/response validated automatically, no manual checks
 - **Async native** — built on Starlette + asyncio, handles concurrent requests
 - **Speed** — one of the fastest Python frameworks, benchmarked near Node
-:::
 
 ---
 
@@ -35,8 +29,7 @@ uv add fastapi "uvicorn[standard]"
 
 ## Your First API in 10 Lines
 
-```python title="main.py"
-from fastapi import FastAPI
+```pythonfrom fastapi import FastAPI
 
 app = FastAPI(title="My First API", version="1.0.0")
 
@@ -168,8 +161,7 @@ def delete_item(item_id: int):
 
 ## Full CRUD Example
 
-```python title="main.py"
-from fastapi import FastAPI, HTTPException
+```pythonfrom fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import Optional, List
 import uuid
@@ -261,7 +253,7 @@ app = FastAPI(
 
 ## Video Reference
 
-<YouTube id="0RS9W8MtZe4" title="FastAPI Full Tutorial - Beginner to Advanced" />
+[![FastAPI Full Tutorial - Beginner to Advanced](https://i.ytimg.com/vi/0RS9W8MtZe4/hqdefault.jpg)](https://youtu.be/0RS9W8MtZe4)
 
 ---
 

@@ -1,8 +1,3 @@
----
-title: Scrapy
-description: Spider framework, item pipelines, middlewares
----
-
 # Scrapy
 
 Scrapy is the industry standard for large-scale, asynchronous web crawling in Python.

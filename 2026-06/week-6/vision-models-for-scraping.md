@@ -1,8 +1,3 @@
----
-title: Vision Models for Scraping
-description: Gemma4V, MoonDream, LLaVA for visual extraction
----
-
 # Vision Models for Scraping
 
 Sometimes data is in an image, a chart, or a highly obfuscated UI where DOM parsing fails.

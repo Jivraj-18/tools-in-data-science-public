@@ -1,9 +1,3 @@
----
-sidebar_position: 11
-title: Local LLMs
-description: Run large language models on your own machine using Ollama, LM Studio, and llama.cpp — no API keys, no cost, full privacy.
----
-
 id: local-llms
 import { YouTube } from '@site/src/components/YouTube';
 
@@ -92,8 +86,7 @@ print(response.choices[0].message.content)
 
 ### Integrate with FastAPI
 
-```python title="main.py"
-from fastapi import FastAPI
+```pythonfrom fastapi import FastAPI
 from openai import AsyncOpenAI
 from pydantic import BaseModel
 
@@ -203,7 +196,7 @@ ollama run llama3.2 --verbose   # show token stats
 
 ## Video Reference
 
-<YouTube id="BsaBH1xMuXQ" title="Run Local LLMs with Ollama" />
+[![Run Local LLMs with Ollama](https://i.ytimg.com/vi/BsaBH1xMuXQ/hqdefault.jpg)](https://youtu.be/BsaBH1xMuXQ)
 
 ---
 

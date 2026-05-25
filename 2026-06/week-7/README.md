@@ -1,8 +1,3 @@
----
-title: Week 07 — CI/CD, Security & Cloud Infrastructure
-description: "Harden and ship: CI/CD pipelines, container security, LLM security + guardrails, cloud compute basics, IaC, budgets, and event-driven systems."
----
-
 # Week 07 — CI/CD, Security & Cloud Infrastructure
 
 Harden and ship: CI/CD pipelines, container security, LLM security + guardrails, cloud compute basics, IaC, budgets, and event-driven systems.
@@ -32,6 +27,6 @@ Harden and ship: CI/CD pipelines, container security, LLM security + guardrails,
 - Implement a small working prototype.
 - Measure or validate results with at least one simple check.
 
-:::tip Content status
+
+**Tip: Content status**
 All pages are placeholders right now. We’ll replace them with real notes later.
-:::

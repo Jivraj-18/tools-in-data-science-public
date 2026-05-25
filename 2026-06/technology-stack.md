@@ -1,8 +1,3 @@
----
-title: Technology Stack
-description: Tools and technologies used across the course
----
-
 # Technology Stack
 
 | Domain | Tools & Technologies |

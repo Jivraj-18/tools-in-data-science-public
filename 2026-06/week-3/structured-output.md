@@ -1,18 +1,12 @@
----
-sidebar_position: 5
-title: Pydantic & Structured Output
-description: Extract reliable, typed JSON from any LLM using the Instructor library, Pydantic models, JSON mode, and function calling.
----
-
 import { YouTube } from '@site/src/components/YouTube';
 
 # Pydantic & Structured Output
 
 LLMs return free-form text. Your application needs typed, validated data. **Instructor** is the bridge — it wraps any LLM client and guarantees structured, validated Pydantic output with automatic retry on failure.
 
-:::info Why this matters
+
+**Info: Why this matters**
 Without structured output, you write brittle regex parsers that break on every model update. With Instructor + Pydantic, you define a schema once and the LLM fills it.
-:::
 
 ---
 
@@ -365,7 +359,7 @@ def parse_resume(resume_text: str) -> Resume:
 
 ## Video Reference
 
-<YouTube id="yj-wSRJwrrc" title="Structured Outputs with Instructor" />
+[![Structured Outputs with Instructor](https://i.ytimg.com/vi/yj-wSRJwrrc/hqdefault.jpg)](https://youtu.be/yj-wSRJwrrc)
 
 ---
 

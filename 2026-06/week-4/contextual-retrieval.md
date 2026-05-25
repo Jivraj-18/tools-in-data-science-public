@@ -1,9 +1,3 @@
----
-sidebar_position: 11
-title: Contextual Retrieval
-description: Anthropic's technique — inject chunk-level context before embedding to make each chunk self-sufficient for retrieval.
----
-
 # Contextual Retrieval
 
 > The problem: chunks lose context when extracted. The fix: prepend a custom context sentence to each chunk before embedding.

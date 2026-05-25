@@ -1,8 +1,3 @@
----
-title: Command Cheatsheet
-description: Frequently used commands (placeholder)
----
-
 # Command Cheatsheet
 
 _This page is a placeholder._

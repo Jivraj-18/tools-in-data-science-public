@@ -1,8 +1,3 @@
----
-title: Lab — Full GCP pipeline (GCS → BigQuery ML → Vertex AI → Cloud Run)
-description: Training + deployment pipeline (dummy).
----
-
 # Lab — Full GCP pipeline (GCS → BigQuery ML → Vertex AI → Cloud Run)
 
 _This is placeholder content for **Week 08 — MLOps, Fine-Tuning & Model Publishing**._

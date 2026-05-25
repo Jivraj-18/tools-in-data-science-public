@@ -1,8 +1,3 @@
----
-title: Lab — Add full observability to a FastAPI service
-description: Prometheus, OpenTelemetry, Grafana
----
-
 # Lab — Add full observability to a FastAPI service
 
 ## Objective

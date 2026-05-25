@@ -1,17 +1,8 @@
----
-id: requestly
-title: Requestly — Intercept, Modify, and Mock Browser Traffic
-sidebar_label: 07 · Requestly
-sidebar_position: 8
-description: Browser-native HTTP interceptor for modifying, redirecting, and mocking requests without touching backend code.
-keywords: [requestly, http interceptor, api mocking, browser, chrome extension, rules, network]
----
-
 # 07 · Requestly
 
-:::info TL;DR
+
+**Info: TL;DR**
 Requestly is a free, open-source browser extension + desktop app that lets you **intercept any request your browser makes, modify it on the fly, redirect it, or mock the response entirely** — without touching backend code or deploying anything. Acquired by BrowserStack in 2025. Installed by 300,000+ developers.
-:::
 
 ## Why Interception?
 
@@ -25,7 +16,7 @@ Classical solutions all suck:
 
 **Requestly sits inside your browser** (no proxy, no certificates) and lets you intercept, modify, and mock with one-click rules.
 
-<YouTube id="xrqmAffe86k" title="Requestly — The All-in-One API Tester and HTTP Interceptor" />
+[![Requestly — The All-in-One API Tester and HTTP Interceptor](https://i.ytimg.com/vi/xrqmAffe86k/hqdefault.jpg)](https://youtu.be/xrqmAffe86k)
 
 ## Install
 

@@ -1,17 +1,8 @@
----
-id: publish-python-library-pypi-uv
-title: "Lab 1.1 — Publish a Python Library to PyPI using UV"
-sidebar_label: "1.1 · PyPI Publishing with UV"
-sidebar_position: 2
-description: Build, version, and publish a real Python package to PyPI using UV and GitHub Actions with Trusted Publishing (no API tokens).
-keywords: [lab, uv, pypi, publish, trusted publishing, github actions, python package]
----
-
 # Lab 1.1 — Publish a Python Library to PyPI using UV
 
-:::info What you'll build
+
+**Info: What you'll build**
 A real Python package, installable by the world via `pip install your-package-name`, published to PyPI from GitHub Actions using **Trusted Publishing** (no API tokens, no secrets in your repo). We'll use **UV** for every step.
-:::
 
 **Time:** 60–90 minutes.
 **Difficulty:** ⭐⭐☆☆☆.
@@ -95,9 +86,9 @@ tds-hello-YOURNAME/
         └── py.typed
 ```
 
-:::tip src-layout matters
+
+**Tip: src-layout matters**
 `--lib` gives you a `src/` layout. This is best practice because it forces tests to run against the *installed* version, not the source directory. You'll avoid a whole class of import bugs.
-:::
 
 </details>
 
@@ -106,8 +97,7 @@ tds-hello-YOURNAME/
 
 Open `src/tds_hello_YOURNAME/__init__.py` and replace the contents:
 
-```python title="src/tds_hello_YOURNAME/__init__.py"
-"""tds-hello — a tiny greeter from the TDS 2026 course."""
+```python"""tds-hello — a tiny greeter from the TDS 2026 course."""
 
 from importlib.metadata import version as _v
 
@@ -139,8 +129,7 @@ uv add --dev pytest
 
 Create `tests/test_greet.py`:
 
-```python title="tests/test_greet.py"
-import pytest
+```pythonimport pytest
 from tds_hello_YOURNAME import greet
 
 
@@ -172,8 +161,7 @@ All three tests should pass.
 
 Open `pyproject.toml` and fill in the metadata:
 
-```toml title="pyproject.toml"
-[project]
+```toml[project]
 name = "tds-hello-YOURNAME"
 version = "0.1.0"
 description = "A tiny greeter library from TDS 2026 at IIT Madras."
@@ -208,14 +196,13 @@ build-backend = "hatchling.build"
 dev = ["pytest>=8"]
 ```
 
-:::tip Why `hatchling`?
+
+**Tip: Why `hatchling`?**
 UV uses `hatchling` as the default build backend — it's PyPA-maintained, fast, and configuration-free for most projects. Leave this section alone unless you know what you're doing.
-:::
 
 Write a proper README:
 
-```markdown title="README.md"
-# tds-hello-YOURNAME
+```markdown# tds-hello-YOURNAME
 
 A tiny Python greeter, published as part of **Tools in Data Science** at IIT Madras (May 2026).
 
@@ -313,12 +300,12 @@ uv publish dist/*
 
 Visit `https://test.pypi.org/project/tds-hello-YOURNAME/` — you should see your package.
 
-:::tip Did it fail?
+
+**Tip: Did it fail?**
 Common errors:
 - `403 Forbidden` — name is already taken; change it.
 - `400 Bad metadata` — fix `pyproject.toml` and rerun `uv build`.
 - `The user YOURNAME isn't allowed to upload to project ...` — token scope wrong.
-:::
 
 Now **delete** that token from TestPyPI (we'll use Trusted Publishing from now on).
 
@@ -342,9 +329,9 @@ Now repeat the same on the real [PyPI](https://pypi.org/manage/account/publishin
 2. Fill in the same details, with **Environment name**: `pypi`.
 3. Save.
 
-:::info What is Trusted Publishing?
+
+**Info: What is Trusted Publishing?**
 Trusted Publishing (a.k.a. OIDC publishing) lets PyPI verify that a publish request came from a specific GitHub Actions workflow using short-lived OIDC tokens — no long-lived secrets to manage or leak. This is now the recommended way to publish.
-:::
 
 </details>
 
@@ -363,8 +350,7 @@ On GitHub → your repo → **Settings → Environments**:
 
 Create `.github/workflows/release.yml`:
 
-```yaml title=".github/workflows/release.yml"
-name: Release
+```yamlname: Release
 
 on:
   push:
@@ -445,9 +431,9 @@ jobs:
         run: uv publish dist/*
 ```
 
-:::note Why two stages?
+
+**Note: Why two stages?**
 TestPyPI is your staging environment — catch bad metadata or missing files before they hit the real PyPI (which you cannot re-upload to with the same version number).
-:::
 
 </details>
 
@@ -456,8 +442,7 @@ TestPyPI is your staging environment — catch bad metadata or missing files bef
 
 `.github/workflows/ci.yml`:
 
-```yaml title=".github/workflows/ci.yml"
-name: CI
+```yamlname: CI
 
 on:
   push:

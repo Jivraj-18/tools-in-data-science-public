@@ -1,8 +1,3 @@
----
-title: Async & Parallelism
-description: asyncio, threading, rate-limit-aware concurrency
----
-
 # Async & Parallelism in Agent Systems
 
 Agents are deeply I/O bound. They wait on LLM APIs, database queries, and web requests.

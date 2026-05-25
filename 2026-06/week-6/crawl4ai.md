@@ -1,8 +1,3 @@
----
-title: Crawl4AI
-description: AI-powered web crawling, structured extraction
----
-
 # Crawl4AI
 
 Crawl4AI is an open-source LLM-friendly web crawler that simplifies extracting structured data from unstructured web pages.

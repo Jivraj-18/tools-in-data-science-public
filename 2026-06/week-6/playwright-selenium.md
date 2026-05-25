@@ -1,8 +1,3 @@
----
-title: Playwright & Selenium
-description: JS-rendered pages, browser automation, selectors
----
-
 # Playwright & Selenium
 
 Modern web scraping often requires executing JavaScript. Tools like Playwright and Selenium automate real browsers.

@@ -1,8 +1,3 @@
----
-title: Speech AI — TTS & STT
-description: Whisper, ElevenLabs, OpenAI TTS, Parakeet
----
-
 # Speech AI
 
 Scraping and generating audio data.

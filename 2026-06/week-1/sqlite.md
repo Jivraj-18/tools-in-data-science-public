@@ -1,17 +1,8 @@
----
-id: sqlite
-title: SQLite — The Database That's Already Installed
-sidebar_label: 05 · SQLite
-sidebar_position: 6
-description: SQLite with WAL mode, FTS5 full-text search, sqlite-utils, and datasette. The most deployed database in the world.
-keywords: [sqlite, sql, database, wal, fts5, sqlite-utils, datasette, full-text search]
----
-
 # 05 · SQLite
 
-:::info TL;DR
+
+**Info: TL;DR**
 SQLite is the most-deployed database engine in existence — it runs in Firefox, iOS, Android, airplanes, and every Python install. It's a **single file** on disk. For the projects in this course (up to a few million rows), SQLite is often the right answer.
-:::
 
 ## Why SQLite?
 
@@ -21,7 +12,7 @@ SQLite is the most-deployed database engine in existence — it runs in Firefox,
 - **Extremely fast** — for local workloads, often faster than Postgres (no network round-trips).
 - **Fantastic tooling** — `sqlite-utils` and `datasette` from Simon Willison turn any `.sqlite` file into a queryable web UI.
 
-<YouTube id="pFr80VSP8iw" title="SQLite in 100 Seconds" />
+[![SQLite in 100 Seconds](https://i.ytimg.com/vi/pFr80VSP8iw/hqdefault.jpg)](https://youtu.be/pFr80VSP8iw)
 
 ## Install the CLI and Helpers
 
@@ -99,9 +90,9 @@ PRAGMA synchronous = NORMAL;          -- WAL + NORMAL = sweet spot
 PRAGMA foreign_keys = ON;
 ```
 
-:::tip When to enable WAL
+
+**Tip: When to enable WAL**
 Almost always. The only cases where you'd avoid WAL are read-only databases or databases on a network filesystem (WAL requires real shared-memory).
-:::
 
 ## FTS5 — Full-Text Search
 
@@ -174,8 +165,7 @@ sqlite-utils extract logs.db access user_agent --table user_agents
 
 ### Python library
 
-```python title="load_csv.py"
-import sqlite_utils
+```pythonimport sqlite_utils
 
 db = sqlite_utils.Database("logs.db")
 
@@ -215,9 +205,9 @@ datasette install datasette-graphql   # GraphQL endpoint
 datasette install datasette-dashboards # dashboards
 ```
 
-:::tip Use case: publish a course dataset
+
+**Tip: Use case: publish a course dataset**
 If you scrape or build a dataset in another week, `sqlite-utils insert + datasette publish` is the fastest way to ship a browsable version to the internet.
-:::
 
 ## Connecting from Python
 
@@ -293,13 +283,13 @@ SELECT payload ->> 'user' AS user, payload ->> 'score' AS score FROM events;
 
 ## Common Pitfalls
 
-:::warning SQLite is not a client-server DB
-If multiple processes on different machines need to write the same database, use Postgres. SQLite excels at single-process or single-machine workloads.
-:::
 
-:::warning No real `DATE` type
+**Warning: SQLite is not a client-server DB**
+If multiple processes on different machines need to write the same database, use Postgres. SQLite excels at single-process or single-machine workloads.
+
+
+**Warning: No real `DATE` type**
 SQLite stores dates as `TEXT` (ISO 8601), `REAL` (Julian day), or `INTEGER` (Unix epoch). Pick one and stick with it. The ecosystem has standardized on ISO 8601 strings: `2026-05-10T14:30:00Z`.
-:::
 
 ## 5-Minute Exercise
 

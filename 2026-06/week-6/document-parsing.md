@@ -1,8 +1,3 @@
----
-title: Document Parsing
-description: Unstructured.io, LlamaParse, Surya OCR, HTML to Markdown
----
-
 # Document Parsing
 
 Real-world data is trapped in PDFs, Word docs, and messy HTML.

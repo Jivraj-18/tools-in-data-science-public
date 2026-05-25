@@ -1,8 +1,3 @@
----
-title: Week 06 Labs
-sidebar_position: 1
----
-
 # Week 06 Labs & Capstones
 
 This directory contains the practical assignments for Week 6: Web Scraping & Data Processing.

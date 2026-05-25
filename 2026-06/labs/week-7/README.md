@@ -1,8 +1,3 @@
----
-title: Hands-on — Week 07
-description: Labs and capstones for Week 07 — CI/CD, Security & Cloud Infrastructure
----
-
 # Hands-on — Week 07 — CI/CD, Security & Cloud Infrastructure
 
 Harden and ship: CI/CD pipelines, container security, LLM security + guardrails, cloud compute basics, IaC, budgets, and event-driven systems.

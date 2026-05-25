@@ -1,8 +1,3 @@
----
-title: Project 1 (After Week 3)
-description: Covers Weeks 1–3
----
-
 # Project 1 (After Week 3)
 
 **Covers:** Weeks 1–3 (tooling, deployment, LLM engineering)

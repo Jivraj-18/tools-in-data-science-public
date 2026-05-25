@@ -1,8 +1,3 @@
----
-title: Firecrawl & Apify
-description: LLM-ready site scraping, actor-based pipelines
----
-
 # Firecrawl & Apify
 
 When scraping at scale, managing proxies, browsers, and retries is tedious. Managed services solve this.

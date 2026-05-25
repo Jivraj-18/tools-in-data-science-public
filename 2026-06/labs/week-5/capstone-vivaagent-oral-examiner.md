@@ -1,8 +1,3 @@
----
-title: Capstone — VivaAgent (Oral Examiner)
-description: WebRTC oral examination system
----
-
 # Capstone — VivaAgent
 
 ## Objective

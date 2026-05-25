@@ -1,8 +1,3 @@
----
-title: Project 2 (After Week 6)
-description: Covers Weeks 4–6
----
-
 # Project 2 (After Week 6)
 
 **Covers:** Weeks 4–6 (RAG, agents, scraping & data processing)

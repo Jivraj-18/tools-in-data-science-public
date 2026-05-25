@@ -1,9 +1,3 @@
----
-sidebar_position: 4
-title: "Lab: RAGAS Evaluation Dashboard"
-description: Build a Streamlit dashboard that benchmarks three RAG strategies — Naive, Hybrid, and Contextual — using RAGAS metrics. All steps + all code included.
----
-
 import Details from '@theme/Details';
 
 # Lab: RAGAS Evaluation Dashboard

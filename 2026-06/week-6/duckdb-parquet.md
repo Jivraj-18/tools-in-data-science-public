@@ -1,8 +1,3 @@
----
-title: DuckDB + Parquet
-description: In-process analytics, S3/GCS querying, Arrow interop
----
-
 # DuckDB + Parquet
 
 SQLite is great for OLTP. DuckDB is great for OLAP (analytical queries over millions of rows).

@@ -1,14 +1,8 @@
----
-sidebar_position: 6
-title: RAGAS Evaluation
-description: Stop guessing whether your RAG works. Use RAGAS to measure faithfulness, answer relevancy, context precision, and context recall — with code.
----
-
 # RAGAS Evaluation
 
 > **"You can't improve what you can't measure."** RAGAS gives you numbers, not vibes.
 
-<YouTube id="IlNglM9bKLw" title="RAGAS: Automated Evaluation of RAG Pipelines" />
+[![RAGAS: Automated Evaluation of RAG Pipelines](https://i.ytimg.com/vi/IlNglM9bKLw/hqdefault.jpg)](https://youtu.be/IlNglM9bKLw)
 
 ---
 
