@@ -3,6 +3,7 @@
 baseURL = '/'
 languageCode = 'en-us'
 title = 'Tools in Data Science'
+relativeURLs = true
 
 disableKinds = ['taxonomy', 'term']
 

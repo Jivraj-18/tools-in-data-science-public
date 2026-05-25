@@ -1,2 +1,2 @@
-- [Jan 2026: Tools in Data Science](/)
+- [Jun 2026: Tools in Data Science](/2026-06/)
 - [Marks Dashboard](marks-dashboard.md)
